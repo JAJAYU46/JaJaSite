@@ -7,6 +7,8 @@ import { ClientRouter } from 'astro:transitions';
 // Import CSS stylesheets so Astro bundles them
 import '../styles/global.css';
 import '../styles/screen.css';
+import '../styles/portfolio.css';
+import { portfolio } from '../data/portfolio';
 
 interface Props {
   title?: string;
@@ -35,7 +37,7 @@ const bodyClass = current === 'home' ? 'home-template' : `${current || 'page'}-t
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark-mode">
 <head>
     <BaseHead
       title={title}
@@ -46,36 +48,10 @@ const bodyClass = current === 'home' ? 'home-template' : `${current || 'page'}-t
       tags={tags}
       author={author}
     />
-    <script is:inline>
-        // Theme toggle script to prevent FOUC
-        (function() {
-            var currentTheme = localStorage.getItem('theme');
-            var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            if (currentTheme === 'dark' || (!currentTheme && prefersDark)) {
-                document.documentElement.classList.add('dark-mode');
-                document.documentElement.classList.remove('light-mode');
-            } else {
-                document.documentElement.classList.add('light-mode');
-                document.documentElement.classList.remove('dark-mode');
-            }
-        })();
-
-        // Re-run theme check on page transitions
-        document.addEventListener('astro:after-swap', function() {
-            var currentTheme = localStorage.getItem('theme');
-            var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            if (currentTheme === 'dark' || (!currentTheme && prefersDark)) {
-                document.documentElement.classList.add('dark-mode');
-                document.documentElement.classList.remove('light-mode');
-            } else {
-                document.documentElement.classList.add('light-mode');
-                document.documentElement.classList.remove('dark-mode');
-            }
-        });
-    </script>
     <ClientRouter />
 </head>
 <body class={bodyClass}>
+    <a class="skip-link" href="#site-main">Skip to content</a>
     <div class="site-wrapper">
         <!-- Main Content Slot -->
         <slot />
@@ -90,7 +66,7 @@ const bodyClass = current === 'home' ? 'home-template' : `${current || 'page'}-t
                     Published with <a href="https://astro.build/" target="_blank" rel="noopener">Astro</a> using a <a href="https://github.com/AntonyLeons/casper" target="_blank" rel="noopener">Casper theme</a>
                 </section>
                 <nav class="site-footer-nav">
-                    <a href={getAssetUrl('/')}>Latest Posts</a>
+                    <a href={getAssetUrl('/projects/')}>Projects</a>
                     {SITE_CONFIG.facebook && (
                         <a href={`https://facebook.com/${SITE_CONFIG.facebook}`} target="_blank" rel="noopener">Facebook</a>
                     )}
@@ -102,7 +78,8 @@ const bodyClass = current === 'home' ? 'home-template' : `${current || 'page'}-t
                     {SITE_CONFIG.github && (
                         <a href={`https://github.com/${SITE_CONFIG.github}`} target="_blank" rel="noopener">GitHub</a>
                     )}
-                    <a href="https://astro.build" target="_blank" rel="noopener">Astro</a>
+                    <a href={getAssetUrl('/about/')}>About</a>
+                    {portfolio.email && <a href={`mailto:${portfolio.email}`}>Contact</a>}
                 </nav>
             </div>
         </footer>

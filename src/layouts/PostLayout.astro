@@ -2,12 +2,14 @@
 import type { CollectionEntry } from 'astro:content';
 import { getCollection, getEntry } from 'astro:content';
 import Layout from './Layout.astro';
+import ResponsiveYouTubeEmbed from '../components/ResponsiveYouTubeEmbed.astro';
+import { youtubeEmbed } from '../utils/youtube';
+import { categories } from '../data/portfolio';
 import SiteNav from '../components/SiteNav.astro';
 import PostCard from '../components/PostCard.astro';
-import FloatingHeader from '../components/FloatingHeader.astro';
 import SubscribeForm from '../components/SubscribeForm.astro';
 import Infinity from '../components/icons/Infinity.astro';
-import { SITE_CONFIG, getAssetUrl, getReadingTime } from '../config';
+import { SITE_CONFIG, getAssetUrl } from '../config';
 
 interface Props {
   post: CollectionEntry<'posts'>;
@@ -22,7 +24,7 @@ const authorData = authorEntry ? authorEntry.data : null;
 const authorKey = authorEntry ? authorEntry.id : '';
 
 // Get all posts for next/prev/related suggestions
-const allPostsUnsorted = await getCollection('posts');
+const allPostsUnsorted = await getCollection('posts', ({ data }) => !data.draft);
 const allPosts = [...allPostsUnsorted].sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 
 const currentIndex = allPosts.findIndex(p => p.id === post.id);
@@ -52,7 +54,7 @@ const isDisqusEnabled = disqus !== false && SITE_CONFIG.disqus;
   description={description}
   image={cover}
   type="article"
-  articleDate={date}
+  articleDate={post.data.dateVerified ? date : undefined}
   tags={tags}
   author={authorData?.name}
   current="post"
@@ -68,9 +70,11 @@ const isDisqusEnabled = disqus !== false && SITE_CONFIG.disqus;
     <main id="site-main" class="site-main outer" role="main">
         <div class="inner">
             <article class={`post-full ${tags.map(t => `tag-${t.toLowerCase().replace(/\s+/g, '-')}`).join(' ')} ${subclass || ''} ${!cover ? 'no-image' : ''}`}>
+                {youtubeEmbed(post.data.youtubeUrl) ? <ResponsiveYouTubeEmbed url={post.data.youtubeUrl!} title={title} /> : cover && <figure class="post-full-image"><img src={getAssetUrl(cover)} alt={post.data.coverAlt || title} fetchpriority="high" loading="eager" /></figure>}
                 <header class="post-full-header">
                     <section class="post-full-meta">
-                        <time class="post-full-meta-date" datetime={new Date(date).toISOString().split('T')[0]}>{formattedDate}</time>
+                        {post.data.dateVerified && <time class="post-full-meta-date" datetime={new Date(date).toISOString().split('T')[0]}>{post.data.dateLabel || formattedDate}</time>}
+                        {post.data.projectCategory && <span>{categories.find(c => c.id === post.data.projectCategory)?.title}</span>}
                         {tags.length > 0 && (
                             <>
                                 <span class="date-divider">/</span>
@@ -84,18 +88,10 @@ const isDisqusEnabled = disqus !== false && SITE_CONFIG.disqus;
                         )}
                     </section>
                     <h1 class="post-full-title">{title}</h1>
+                    {description && <p class="project-summary">{description}</p>}
+                    <ul class="tech-tags">{post.data.technologies.map(tech => <li>{tech}</li>)}</ul>
+                    {post.data.githubUrl && <a class="pill" href={post.data.githubUrl} target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a>}
                 </header>
-
-                {cover && (
-                    <figure class="post-full-image">
-                        <img 
-                            src={getAssetUrl(cover)} 
-                            alt={title} 
-                            fetchpriority="high" 
-                            loading="eager" 
-                        />
-                    </figure>
-                )}
 
                 <section class="post-full-content">
                     <div class="kg-card-markdown">
@@ -129,7 +125,7 @@ const isDisqusEnabled = disqus !== false && SITE_CONFIG.disqus;
                             </section>
                         </section>
                         <div class="post-full-footer-right">
-                            <a class="author-card-button" href={getAssetUrl(`/author/${authorKey}/`)}>Read More</a>
+                            <a class="author-card-button" href={getAssetUrl(`/author/${authorKey}/`)}>More Projects</a>
                         </div>
                     )}
                 </footer>
@@ -222,7 +218,7 @@ const isDisqusEnabled = disqus !== false && SITE_CONFIG.disqus;
     </aside>
 
     <!-- Floating Header -->
-    <FloatingHeader title={title} slug={post.id} />
+
 </Layout>
 
 <script>

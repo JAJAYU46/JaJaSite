@@ -1,4 +1,5 @@
 ---
+draft: true
 current: post
 cover:  assets/images/locked.jpg
 navigation: True

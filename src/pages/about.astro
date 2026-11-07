@@ -1,12 +1,6 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
-import { Content, frontmatter } from '../data/about.md';
+import { Content } from '../data/about.md';
+import PortfolioLinks from '../components/PortfolioLinks.astro';
 ---
-
-<PageLayout
-  title={frontmatter.title}
-  cover={frontmatter.cover}
-  subclass={frontmatter.subclass}
->
-  <Content />
-</PageLayout>
+<PageLayout title="About Me" description="Meet Chia-Jung Yu (JaJa), an incoming Boston University robotics master's student with a Bio-Mechatronics Engineering background."><Content /><PortfolioLinks /></PageLayout>

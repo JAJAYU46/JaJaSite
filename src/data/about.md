@@ -1,16 +1,31 @@
 ---
-current: about
-title: About
-navigation: true
-logo: 'assets/images/ghost.png'
-class: page-template
-subclass: 'post page'
+title: About Chia-Jung Yu
 ---
+## Engineering at the intersection of software and the physical world.
 
-Ghost is professional publishing platform designed for modern journalism. This is a demo site of a basic Ghost install to give you a general sense of what a new Ghost site looks like when set up for the first time.
+I'm Chia-Jung Yu — also known as JaJa. My background in Bio-Mechatronics Engineering at National Taiwan University brought me to robotics: a field where perception, software, and physical systems come together. I am an incoming M.S. in Robotics student at Boston University for Spring 2027.
 
-> If you'd like to set up a site like this for yourself, head over to [Ghost.org](https://ghost.org/) and start a free 14 day trial to give Ghost a try!
+I enjoy working across the autonomy pipeline, from understanding sensor data to integrating the software that helps a robot act in its environment. I'm interested in Robotics Software Engineering internships and full-time opportunities in the United States.
 
-If you're a developer: Ghost is a completely open source (MIT) Node.js application built on a JSON API with an Ember.js admin client. It works with MySQL and SQLite, and is publicly available [on Github](https://github.com/TryGhost/ghost).
+## Education
 
-If you need help with using Ghost, you'll find a ton of useful articles on [our knowledgebase](https://help.ghost.org/), as well as extensive [developer documentation](https://docs.ghost.org/).
+- **Boston University** — Incoming M.S. in Robotics, Spring 2027.
+- **National Taiwan University** — Bio-Mechatronics Engineering.
+- **Warsaw University of Technology** — International exchange.
+- **Wageningen University** — International exchange.
+
+## Research & Experience
+
+My robotics research experience includes the NTU Robots and Medical Mechatronics Lab, with work involving robotic perception, planning, and manipulation. My robotics software development interests include FAST-LIVO2, loop closure, and global relocalization.
+
+The project notebook introduces this work. Detailed contribution statements and evaluation results will be added as supporting material is prepared.
+
+## Technical Interests
+
+Robotics software · SLAM and localization · Computer vision and perception · Autonomous navigation · Motion planning · Embedded systems · AI and machine learning.
+
+## Beyond Engineering
+
+International exchanges in Poland and the Netherlands have been part of my education, alongside a game development summer program at Utrecht University. Outside engineering, my experiences include leadership in the NTU Guitar Club, lifeguard training and certification, and the International Companions for Learning program.
+
+These experiences sit alongside my technical work as opportunities to learn, collaborate, and connect with people from different backgrounds.

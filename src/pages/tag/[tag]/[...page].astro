@@ -6,7 +6,7 @@ import PostCard from '../../../components/PostCard.astro';
 import { SITE_CONFIG, getAssetUrl } from '../../../config';
 
 export async function getStaticPaths({ paginate }: any) {
-  const allPosts = await getCollection('posts');
+  const allPosts = await getCollection('posts', ({ data }) => !data.draft);
   const tagSlugs = new Set<string>();
   
   allPosts.forEach(post => {

@@ -3,7 +3,7 @@ import { SITE_CONFIG, getAssetUrl } from '../config';
 import { generateAtomFeed } from '../utils/feed';
 
 export async function GET(context: any) {
-  const posts = await getCollection('posts');
+  const posts = await getCollection('posts', ({ data }) => !data.draft);
   posts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
   
   const siteUrl = context.site || 'https://casper.leons.dev/';

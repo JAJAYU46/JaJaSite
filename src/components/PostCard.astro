@@ -1,4 +1,5 @@
 ---
+import ProjectVisual from './ProjectVisual.astro';
 import type { CollectionEntry } from 'astro:content';
 import { getEntry } from 'astro:content';
 import { getAssetUrl, getExcerpt, getReadingTime } from '../config';
@@ -31,9 +32,10 @@ const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
 <article class={`post-card ${indexClass} ${!cover ? 'no-image' : ''}`}>
     {cover && (
         <a class="post-card-image-link" href={postLink}>
-            <div class="post-card-image" style={`background-image: url(${getAssetUrl(cover)})`}></div>
+            <img class="post-card-image" src={getAssetUrl(cover)} alt={post.data.coverAlt || title} loading="lazy" width="640" height="400" />
         </a>
     )}
+    {!cover && post.data.projectCategory && <a class="post-card-image-link" href={postLink} aria-label={`Explore ${title}`}><ProjectVisual title={title} category={post.data.projectCategory} /></a>}
     <div class="post-card-content">
         <a class="post-card-content-link" href={postLink}>
             <header class="post-card-header">

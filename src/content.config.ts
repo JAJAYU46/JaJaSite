@@ -25,6 +25,18 @@ const posts = defineCollection({
     navigation: z.union([z.boolean(), z.string()]).optional(),
     layout: z.string().optional(),
     disqus: z.boolean().optional(),
+    draft: z.boolean().default(false),
+    featured: z.boolean().default(false),
+    featuredOrder: z.number().optional(),
+    projectCategory: z.string().optional(),
+    technologies: z.array(z.string()).default([]),
+    showOnHome: z.boolean().default(false),
+    order: z.number().default(100),
+    youtubeUrl: z.string().url().optional(),
+    githubUrl: z.string().url().optional(),
+    coverAlt: z.string().optional(),
+    dateLabel: z.string().optional(),
+    dateVerified: z.boolean().default(true),
   }),
 });
 

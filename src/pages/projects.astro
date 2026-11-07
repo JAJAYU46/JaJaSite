@@ -1,0 +1,16 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import SiteNav from '../components/SiteNav.astro';
+import PostCard from '../components/PostCard.astro';
+import { categories, sortProjects } from '../data/portfolio';
+const projects = (await getCollection('posts', ({data}) => !data.draft && !!data.projectCategory)).sort(sortProjects);
+---
+<Layout title="Projects" description="Robotics, software, and embedded engineering projects by Chia-Jung Yu." current="projects">
+  <header class="site-header outer"><div class="inner"><SiteNav current="projects" /></div></header>
+  <main id="site-main" class="site-main outer"><div class="inner">
+    <header class="page-intro"><p class="eyebrow">THE PROJECT NOTEBOOK</p><h1>Ideas into <em>working systems.</em></h1><p>Exploring autonomy, building software, and connecting the digital with the physical.</p></header>
+    <nav class="category-nav" aria-label="Project categories">{categories.map(category => <a class="pill" href={`#${category.id}`}>{category.title}<span>{projects.filter(p => p.data.projectCategory === category.id).length}</span></a>)}</nav>
+    {categories.map(category => <section class="portfolio-section project-category" id={category.id} aria-labelledby={`${category.id}-title`}><div class="section-heading"><div><p class="eyebrow">{category.id.toUpperCase()}</p><h2 id={`${category.id}-title`}>{category.title}</h2><p>{category.description}</p></div></div><div class="post-feed standard-feed">{projects.filter(p => p.data.projectCategory === category.id).map(post => <PostCard post={post} />)}</div></section>)}
+  </div></main>
+</Layout>

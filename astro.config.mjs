@@ -1,9 +1,9 @@
-import { defineConfig, fontProviders } from 'astro/config';
+import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: process.env.SITE_URL || 'https://casper.leons.dev',
-  base: process.env.BASE_PATH || '/',
+  site: process.env.SITE_URL || 'https://jajayu46.github.io',
+  base: process.env.BASE_PATH || '/JaJaSite/',
   markdown: {
     shikiConfig: {
       themes: {
@@ -12,14 +12,4 @@ export default defineConfig({
       },
     },
   },
-  fonts: [
-    {
-      name: 'Inter',
-      cssVariable: '--font-inter',
-      provider: fontProviders.google({
-        weights: [300, 400, 500, 600, 700],
-        display: 'swap',
-      }),
-    },
-  ],
 });

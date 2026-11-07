@@ -1,0 +1,11 @@
+---
+interface Props { category?: string; title: string; }
+const {category = 'robotics', title} = Astro.props;
+---
+<div class={`project-visual visual-${category}`} role="img" aria-label={`Abstract illustration for ${title}; project imagery forthcoming`}>
+  <div class="visual-grid" aria-hidden="true"></div>
+  <div class="visual-orbit orbit-one" aria-hidden="true"></div><div class="visual-orbit orbit-two" aria-hidden="true"></div>
+  <div class="glacier-facet facet-one" aria-hidden="true"></div><div class="glacier-facet facet-two" aria-hidden="true"></div><div class="glacier-facet facet-three" aria-hidden="true"></div>
+  <span class="visual-coordinate" aria-hidden="true">{category === 'robotics' ? 'PERCEPTION / PLANNING / AUTONOMY' : category === 'software' ? 'SYSTEMS / SOFTWARE / DATA' : 'HARDWARE / CONTROL / INTEGRATION'}</span>
+  <span class="visual-note">Abstract illustration · project media forthcoming</span>
+</div>

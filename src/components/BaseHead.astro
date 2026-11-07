@@ -1,6 +1,6 @@
 ---
 import { SITE_CONFIG, getAssetUrl } from '../config';
-import { Font } from 'astro:assets';
+
 
 interface Props {
   title?: string;
@@ -36,11 +36,11 @@ const isoDate = articleDate ? new Date(articleDate).toISOString() : undefined;
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="HandheldFriendly" content="True" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="shortcut icon" href={getAssetUrl(SITE_CONFIG.favicon)} type="image/png" />
+<link rel="shortcut icon" href={getAssetUrl(SITE_CONFIG.favicon)} type="image/svg+xml" />
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
 <!-- Fonts -->
-<Font cssVariable="--font-inter" preload />
+
 
 <!-- LCP Image Preloads -->
 {type === 'article' && image && (

@@ -10,13 +10,14 @@ import Facebook from '../../../components/icons/Facebook.astro';
 import Rss from '../../../components/icons/Rss.astro';
 
 export async function getStaticPaths({ paginate }: any) {
-  const allPosts = await getCollection('posts');
+  const allPosts = await getCollection('posts', ({ data }) => !data.draft);
   const allAuthors = await getCollection('authors');
   const paths: any[] = [];
   
   for (const authorEntry of allAuthors) {
     const author = authorEntry.id;
     const filteredPosts = allPosts.filter(post => post.data.author && post.data.author.id === author);
+    if (!filteredPosts.length) continue;
     filteredPosts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
     
     const pages = paginate(filteredPosts, { 

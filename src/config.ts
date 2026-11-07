@@ -1,25 +1,34 @@
+import { portfolio } from './data/portfolio';
+
 export const SITE_CONFIG = {
-  title: 'Ghost',
-  description: 'The professional publishing platform',
-  cover: 'assets/images/blog-cover.jpg',
-  logo: 'assets/images/blog-icon.png',
-  logoDark: 'assets/images/favicon.png',
-  favicon: 'assets/images/favicon.png',
+  title: "JaJa | Robotics Engineering Portfolio",
+  description: "Robotics Software | SLAM | Perception | Autonomous Systems",
+
+  cover: 'assets/images/portfolio-cover.svg',
+  logo: 'assets/images/jaja-mark.svg',
+  logoDark: 'assets/images/jaja-mark.svg',
+  favicon: 'assets/images/jaja-mark.svg',
+
   navigation: true,
-  subscribers: true,
-  twitter: 'tryghost',
-  facebook: 'ghost',
-  xUsername: 'tryghost',
-  github: 'AntonyLeons/casper',
+  subscribers: false,
+
+  twitter: '',
+  facebook: '',
+  xUsername: '',
+  github: new URL(portfolio.github).pathname.replace(/^\//, ''),
+
   disqus: false,
-  disqusShortname: 'antonyleons',
-  googleAnalytics: 'UA-69281367-1',
+  disqusShortname: '',
+
+  googleAnalytics: '',
+
   wordsPerMinute: 200,
   pageSize: 25,
+
   algolia: {
-    applicationId: '08WJSG8GMW',
-    indexName: 'jasper2',
-    searchOnlyApiKey: '899d0b22cae5a8affeb4f1f9f35adcc4',
+    applicationId: '',
+    indexName: '',
+    searchOnlyApiKey: '',
   },
 };
 
@@ -33,7 +42,7 @@ export function getAssetUrl(path: string | null | undefined): string {
   }
   const base = import.meta.env.BASE_URL; // e.g. "/casper/" or "/"
   const cleanPath = path.replace(/^\//, '');
-  return `${base}${cleanPath}`;
+  return `${base.replace(/\/$/, '')}/${cleanPath}`;
 }
 
 /**

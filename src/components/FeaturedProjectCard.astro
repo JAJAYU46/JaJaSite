@@ -1,0 +1,18 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getAssetUrl } from '../config';
+import ProjectVisual from './ProjectVisual.astro';
+interface Props { post: CollectionEntry<'posts'>; index: number; }
+const {post, index} = Astro.props;
+---
+<article class:list={['featured-project', { 'is-reversed': index % 2 === 1 }]}>
+  <a class="featured-project-link" href={getAssetUrl(`/${post.id}/`)}>
+    <div class="featured-copy">
+      <div class="featured-kicker"><span>{String(index + 1).padStart(2, '0')}</span> ROBOTICS & AUTONOMOUS SYSTEMS</div>
+      <h3>{post.data.title}</h3><p>{post.data.description}</p>
+      <ul class="tech-tags" aria-label="Technologies">{post.data.technologies.map(tech => <li>{tech}</li>)}</ul>
+      <span class="explore-link">Explore Project <span aria-hidden="true">↗</span></span>
+    </div>
+    <div class="featured-media">{post.data.cover ? <img src={getAssetUrl(post.data.cover)} alt={post.data.coverAlt || post.data.title} loading="lazy" width="800" height="650" /> : <ProjectVisual title={post.data.title} category={post.data.projectCategory} />}</div>
+  </a>
+</article>

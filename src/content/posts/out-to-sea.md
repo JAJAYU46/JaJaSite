@@ -1,4 +1,5 @@
 ---
+draft: true
 current: post
 cover: 'assets/images/waves.jpg'
 navigation: True

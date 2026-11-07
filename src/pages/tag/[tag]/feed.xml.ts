@@ -3,7 +3,7 @@ import { SITE_CONFIG, getAssetUrl } from '../../../config';
 import { generateAtomFeed } from '../../../utils/feed';
 
 export async function getStaticPaths() {
-  const allPosts = await getCollection('posts');
+  const allPosts = await getCollection('posts', ({ data }) => !data.draft);
   const tagSlugs = new Set<string>();
   
   allPosts.forEach(post => {
@@ -22,7 +22,7 @@ export async function getStaticPaths() {
 export async function GET(context: any) {
   const { tag } = context.params;
   
-  const allPosts = await getCollection('posts');
+  const allPosts = await getCollection('posts', ({ data }) => !data.draft);
   const filteredPosts = allPosts.filter(post => 
     post.data.tags.some(t => t.toLowerCase().replace(/\s+/g, '-') === tag)
   );

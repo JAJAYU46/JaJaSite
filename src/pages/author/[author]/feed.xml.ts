@@ -4,7 +4,8 @@ import { generateAtomFeed } from '../../../utils/feed';
 
 export async function getStaticPaths() {
   const allAuthors = await getCollection('authors');
-  return allAuthors.map(authorEntry => ({
+  const posts = await getCollection('posts', ({data}) => !data.draft);
+  return allAuthors.filter(author => posts.some(post => post.data.author.id === author.id)).map(authorEntry => ({
     params: { author: authorEntry.id }
   }));
 }
@@ -19,7 +20,7 @@ export async function GET(context: any) {
     return new Response('Author not found', { status: 404 });
   }
 
-  const allPosts = await getCollection('posts');
+  const allPosts = await getCollection('posts', ({ data }) => !data.draft);
   const filteredPosts = allPosts.filter(post => post.data.author && post.data.author.id === author);
   filteredPosts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
   

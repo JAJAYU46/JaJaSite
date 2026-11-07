@@ -3,74 +3,32 @@ import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import SiteNav from '../components/SiteNav.astro';
 import PostCard from '../components/PostCard.astro';
-import AlgoliaSearch from '../components/AlgoliaSearch.astro';
-import { SITE_CONFIG, getAssetUrl } from '../config';
-
-export async function getStaticPaths({ paginate }: any) {
-  const allPosts = await getCollection('posts');
-  allPosts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
-  
-  const pages = paginate(allPosts, { pageSize: SITE_CONFIG.pageSize });
-  
-  return pages.map((p: any) => ({
-    params: { 
-      page: p.params.page === 1 || p.params.page === '1' || !p.params.page ? undefined : `page${p.params.page}` 
-    },
-    props: { 
-      pageProps: p.props,
-      maxPages: pages.length
-    }
-  }));
-}
-
-const { pageProps, maxPages } = Astro.props;
-const { page } = pageProps;
-
-// Determine header image
-const headerBg = SITE_CONFIG.cover ? getAssetUrl(SITE_CONFIG.cover) : null;
+import FeaturedProjectCard from '../components/FeaturedProjectCard.astro';
+import EducationTimeline from '../components/EducationTimeline.astro';
+import PortfolioLinks from '../components/PortfolioLinks.astro';
+import { getAssetUrl } from '../config';
+import { portfolio, sortProjects } from '../data/portfolio';
+export function getStaticPaths() { return [{ params: {page: undefined} }]; }
+const projects = (await getCollection('posts', ({data}) => !data.draft && !!data.projectCategory)).sort(sortProjects);
+const featured = projects.filter(p => p.data.featured).sort((a,b) => (a.data.featuredOrder ?? 100) - (b.data.featuredOrder ?? 100)).slice(0,3);
+const more = projects.filter(p => p.data.showOnHome && !featured.some(f => f.id === p.id)).slice(0, portfolio.homeProjectCount);
 ---
-
 <Layout current="home">
-    <!-- Header -->
-    <header class={`site-header outer ${headerBg ? '' : 'no-cover'}`} style={headerBg ? `background-image: url(${headerBg})` : ''}>
-        <div class="inner">
-            <div class="site-header-content">
-                <h1 class="site-title">
-                    {SITE_CONFIG.logo ? (
-                        <img class="site-logo" src={getAssetUrl(SITE_CONFIG.logo)} alt={SITE_CONFIG.title}/>
-                    ) : (
-                        SITE_CONFIG.title
-                    )}
-                </h1>
-                <h2 class="site-description">{SITE_CONFIG.description}</h2>
-            </div>
-            <SiteNav current="home" />
-        </div>
-    </header>
-
-    <!-- Main Content Feed -->
-    <main id="site-main" class="site-main outer" role="main">
-        <div class="inner">
-            {SITE_CONFIG.algolia && (
-                <div id="search-hits" class="post-feed" style="display: none;"></div>
-            )}
-            
-            <div id="posts" class="post-feed" data-max-pages={maxPages} data-base-url={getAssetUrl('/')}>
-                {page.data.map((post: any) => (
-                    <PostCard post={post} />
-                ))}
-            </div>
-
-            {SITE_CONFIG.algolia && <AlgoliaSearch />}
-        </div>
-    </main>
+  <header class="site-header outer"><div class="inner"><SiteNav current="home" /></div></header>
+  <main id="site-main" class="site-main">
+    <section class="hero outer" aria-labelledby="intro-title">
+      <div class="hero-landscape" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="inner hero-content"><p class="eyebrow">ROBOTICS <span>·</span> SOFTWARE <span>·</span> AUTONOMY</p>
+        <h1 id="intro-title">Hi, I'm <span>Chia-Jung Yu.</span></h1>
+        <p class="hero-description">I'm an incoming M.S. Robotics student at Boston University with a background in Bio-Mechatronics Engineering at National Taiwan University. I enjoy building autonomous robotic systems, from perception and SLAM to real-world software integration.</p>
+        <PortfolioLinks /><p class="hero-footnote">From understanding the world to helping robots move through it.</p>
+      </div>
+    </section>
+    <div class="outer"><div class="inner"><EducationTimeline />
+      <section class="portfolio-section" aria-labelledby="featured-title"><div class="section-heading"><div><p class="eyebrow">SELECTED WORK / 01—03</p><h2 id="featured-title">Featured Robotics Projects</h2></div><p>Perception meets action.</p></div>
+        <div class="featured-list">{featured.map((post,index) => <FeaturedProjectCard post={post} index={index} />)}</div>
+      </section>
+      <section class="portfolio-section more-projects" aria-labelledby="more-title"><div class="section-heading"><div><p class="eyebrow">MORE TO EXPLORE</p><h2 id="more-title">A wider engineering toolkit.</h2></div><a class="text-link" href={getAssetUrl('/projects/')}>View All Projects ↗</a></div><div class="post-feed standard-feed">{more.map(post => <PostCard post={post} />)}</div></section>
+    </div></div>
+  </main>
 </Layout>
-
-<script>
-  import { initInfiniteScroll } from '../utils/infinite-scroll';
-  document.addEventListener('astro:page-load', () => {
-    initInfiniteScroll('#posts');
-  });
-</script>
-
-
