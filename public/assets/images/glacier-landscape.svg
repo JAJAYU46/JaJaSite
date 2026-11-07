@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="400" viewBox="0 0 760 400" fill="none">
+  <defs>
+    <linearGradient id="ice-body" x1="260" y1="100" x2="395" y2="285" gradientUnits="userSpaceOnUse"><stop stop-color="#daf5fc"/><stop offset=".38" stop-color="#77b7d3"/><stop offset="1" stop-color="#194b6b"/></linearGradient>
+    <linearGradient id="ice-shadow" x1="318" y1="70" x2="565" y2="268" gradientUnits="userSpaceOnUse"><stop stop-color="#8cc6dd"/><stop offset=".48" stop-color="#2b6a8e"/><stop offset="1" stop-color="#0b304b"/></linearGradient>
+    <linearGradient id="ice-front" x1="90" y1="230" x2="120" y2="294" gradientUnits="userSpaceOnUse"><stop stop-color="#b0e6f4"/><stop offset="1" stop-color="#3d7e9d"/></linearGradient>
+    <linearGradient id="ice-reflection" x2="0" y2="1"><stop stop-color="white" stop-opacity=".25"/><stop offset="1" stop-color="white" stop-opacity="0"/></linearGradient>
+    <radialGradient id="ice-haze"><stop stop-color="#5bbde4" stop-opacity=".16"/><stop offset="1" stop-color="#2c79a5" stop-opacity="0"/></radialGradient>
+    <mask id="ice-fade"><rect width="760" height="400" fill="url(#ice-reflection)"/></mask>
+    <g id="ice-range">
+      <!-- A broken ridge and irregular ice faces, drawn as original decorative artwork. -->
+      <path d="m15 255 38-29 27 5 30-48 25 10 22-30 19 12 35-53 25 11 31-27 18 8 36-44 27 11 16 28 22-9 28 35 17-4 23 26 23-14 25 32 22-5 28 35 22-3 22 18 36-13 26 16 32-10 42 29-24 26-109 13-151-4-101 8-134-12-87 3-56-14Z" fill="url(#ice-shadow)"/>
+      <path d="m15 255 65-24 30-48 8 47 17-37 22-30 19 12 35-53 25 11 31-27 18 8 36-44-12 39-22 21-9 31-27 12-18 41-30-5-26 33-31-7-18 21-50-4-38 19Z" fill="url(#ice-body)"/>
+      <path d="m321 80 27 11 16 28 22-9 28 35 17-4 23 26 23-14 25 32 22-5 28 35 22-3 22 18 36-13 26 16 32-10 42 29-109 6-85-7-66 10-75-17-42 10-53-6 38-42-6-24 23-30Z" fill="url(#ice-shadow)"/>
+      <path d="m321 80-12 39-22 21-9 31-27 12-18 41 35-15 22-40 27-20-5-19 16-27 20-12Z" fill="#e2f7fc" opacity=".86"/>
+      <path d="m321 80 13 43-3 23 20 26 6 31 29 35-23-9-24-40-18-20-4-20-5-19 16-27Z" fill="#458cad"/>
+      <path d="m348 91 16 28 22-9-6 25 21 24 13-14-15 28 21 24 11 37-33-26-5-33-19-21-15-25Z" fill="#609fbc"/>
+      <path d="m211 122 9 35-14 26-3 34-20 24 6-48 13-24Z" fill="#d3f2f9"/>
+      <path d="m211 122 25 11-8 19 11 32-16 25-20 8 3-34 14-26Z" fill="#5999b6"/>
+      <path d="m157 163 19 12-17 18-3 31-22 20 7-40Z" fill="#c5ecf6"/>
+      <path d="m110 183 8 47-20 22-18-21Z" fill="#a8dae9"/>
+      <path d="m267 106 18 8-12 24-16 18 4-23-16 11Z" fill="#c9edf7"/>
+      <path d="m431 141 23 26 23-14-12 28 22 21 9 30-22-17-13-25-15-8Z" fill="#5999b8"/>
+      <path d="m502 185 22-5 28 35-22-7-8 19-12-15Z" fill="#548eab"/>
+      <path d="m574 212 22 18 36-13-27 21 28 19-42-7-24-15Z" fill="#427b9b"/>
+      <path d="m18 257 38-8 42 3 25-17 31 7 24-18 27 7 27-17 42 4 27-13 35 18 29 6 34-8 45 20 37-8 39 20 55-1 30 7 75-8 48 10-23 22-109 13-151-4-101 8-134-12-87 3-56-14Z" fill="url(#ice-front)"/>
+      <path d="m18 257 38-8 42 3 25-17 31 7 24-18 27 7 27-17 42 4 27-13 35 18 29 6 34-8 45 20 37-8 39 20 55-1 30 7 75-8 48 10" stroke="#c4edf7" stroke-width="2" opacity=".65"/>
+      <g stroke="#ddf8fc" stroke-width="1" opacity=".42">
+        <path d="m299 111-5 28-17 14-7 31M305 119l-6 28-18 30-4 21M325 110l11 25-1 17 14 23M341 118l10 18-3 12 18 21 4 33M239 141l-9 21 5 21-13 25M195 159l-8 26-12 17-3 24M163 191l-5 28M112 215l-6 25M371 129l7 22 15 12M408 168l11 18 4 25M443 172l13 22 3 18M480 190l18 33M533 215l12 17M53 258l9 17M72 259l-2 20M107 255l12 25M136 249l-1 29M161 248l5 36M182 241l-7 25 6 22M204 239l8 36M237 226l-6 30 8 29M260 228l-6 25 2 32M285 219l7 32-4 31M310 223l-6 34 7 23M335 234l9 30M362 238l-6 24 8 16M393 237l10 35M434 250l-3 25M457 251l11 26M488 262l3 18M527 264l4 14M568 265l-5 13"/>
+      </g>
+      <g stroke="#164765" stroke-width="1.4" opacity=".7"><path d="m99 260 2 18M151 252l-5 22 2 11M222 239l-5 31M273 235l2 41M323 240l7 30M376 247l2 21M415 254l4 19M503 267l4 13"/></g>
+      <path d="m0 286 65-4 78 9 45-3 37 8 42-1 65 8 56-6 58 3 71-4 62 6 60-10 81 2 40-7" stroke="#c6f1fa" opacity=".5"/>
+    </g>
+  </defs>
+  <ellipse cx="330" cy="202" rx="350" ry="170" fill="url(#ice-haze)"/>
+  <use href="#ice-range"/>
+  <use href="#ice-range" transform="translate(0 464) scale(1 -.6)" mask="url(#ice-fade)" opacity=".35"/>
+  <g stroke="#6bb8d6" opacity=".25"><path d="M28 308h124m45 5h78m45-5h120m-369 18h143m62 2h133m-305 17h100m28 0h85m-58 20h108m-36-16h101m60-29h117M9 293h100m405 20h129"/></g>
+  <path d="m30 302 27-8 44 3-9 7Z" fill="#7ab9d0" opacity=".7"/><path d="m480 306 21-6 29 4-14 5Z" fill="#6cacc7" opacity=".6"/>
+</svg>

@@ -2115,7 +2115,7 @@ html.dark-mode .pagination:before {
    Navigation Bar Transparency & Mobile-Friendly Adjustments
    ========================================================================== */
 .site-header {
-    background-color: #0d0f12 !important;
+    background-color: #0d0f12;
 }
 
 @media (max-width: 700px) {

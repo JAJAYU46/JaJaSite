@@ -1,11 +1,39 @@
 ---
-interface Props { category?: string; title: string; }
+interface Props { category?: string; title: string; variant?: number; }
 const {category = 'robotics', title} = Astro.props;
+const seed = [...title].reduce((sum, char) => sum + char.charCodeAt(0), 0);
+const variant = (Astro.props.variant ?? seed) % 3;
+const labels = ['SPATIAL MAPPING', 'VIEWPOINT EXPLORATION', 'AUTONOMOUS NAVIGATION'];
+// Decorative concept illustrations, deliberately distinguished from project evidence.
+const points = Array.from({length: 180}, (_, i) => {
+  const x = (i * 73 + seed) % 390;
+  const y = (i * 47 + seed) % 160;
+  return {x: 95 + x, y: 62 + y * .65 + x * .17, opacity: .22 + (i % 5) * .13};
+});
 ---
-<div class={`project-visual visual-${category}`} role="img" aria-label={`Abstract illustration for ${title}; project imagery forthcoming`}>
-  <div class="visual-grid" aria-hidden="true"></div>
-  <div class="visual-orbit orbit-one" aria-hidden="true"></div><div class="visual-orbit orbit-two" aria-hidden="true"></div>
-  <div class="glacier-facet facet-one" aria-hidden="true"></div><div class="glacier-facet facet-two" aria-hidden="true"></div><div class="glacier-facet facet-three" aria-hidden="true"></div>
-  <span class="visual-coordinate" aria-hidden="true">{category === 'robotics' ? 'PERCEPTION / PLANNING / AUTONOMY' : category === 'software' ? 'SYSTEMS / SOFTWARE / DATA' : 'HARDWARE / CONTROL / INTEGRATION'}</span>
-  <span class="visual-note">Abstract illustration · project media forthcoming</span>
+<div class={`project-visual visual-${category} concept-${variant}`} role="img" aria-label={`Concept illustration for ${title}; actual project media forthcoming`}>
+  <span class="visual-coordinate" aria-hidden="true">{category === 'robotics' ? labels[variant] : category === 'software' ? 'SOFTWARE / SYSTEMS / DATA' : 'EMBEDDED / HARDWARE / CONTROL'}</span>
+  <svg class="concept-drawing" viewBox="0 0 600 320" fill="none" aria-hidden="true">
+    {variant === 0 && <>
+      <g stroke="#5b9ab7" stroke-width=".7" opacity=".2">{Array.from({length:11},(_,i) => <><path d={`M${35+i*37} ${220-i*13}l200 85`} /><path d={`M${35+i*19} ${220+i*8}l370-130`} /></>)}</g>
+      <g stroke="#76bcd8" stroke-width="1.3"><path d="m108 167 139-54 234 89-136 55-237-90Z M108 167v-49l139-54 234 89v49M247 64v49M345 257v-49l136-55M108 118l237 90M177 140v-49M324 144l72-28M324 144v-43M247 113l-1 56 99 39M179 194l67-25M395 174v49"/><path d="m176 91 72 28 75-29M396 116v58M176 140l-1 52" opacity=".5"/></g>
+      <g fill="#a7e3ed">{points.map(p=><circle cx={p.x} cy={p.y} r="1.1" opacity={p.opacity}/>)}</g>
+      <g stroke="#c0edf9" opacity=".8"><circle cx="301" cy="183" r="12"/><circle cx="301" cy="183" r="32" stroke-dasharray="2 6"/><path d="m301 160 0-13m0 59v12m-23-35h-12m58 0h12"/></g>
+    </>}
+    {variant === 1 && <>
+      <g stroke="#6796a0" opacity=".35"><path d="M105 249c39-68 27-134 57-198M166 202l-54-47m35-17 48-40M423 260c-18-50-10-113-42-190M403 162l56-44m-71-18-35-31"/><path d="M140 133c-28-40-46-28-47-21 13 27 30 34 47 21Zm247-24c13-31 34-37 45-25-4 22-29 32-45 25Z" fill="#265b59"/></g>
+      <g fill="#3f746f" stroke="#88b6ab"><circle cx="176" cy="154" r="23"/><circle cx="409" cy="184" r="26"/><circle cx="377" cy="129" r="17"/></g>
+      <g stroke="#8ed9df" stroke-width="1.5"><circle cx="293" cy="168" r="31" fill="#376b70"/><path d="m293 135 5 20 16-7-9 16M291 136l-9 19-14-5"/><circle cx="293" cy="168" r="63" stroke-dasharray="4 7" opacity=".6"/><path d="m204 250 74-68-52 112M402 60l-86 98 46-123M190 56l82 91-122-30" opacity=".5"/></g>
+      <g fill="#153b50" stroke="#b4e4ee" stroke-width="1.5"><rect x="186" y="240" width="29" height="19" rx="4" transform="rotate(-35 200 250)"/><rect x="385" y="46" width="29" height="19" rx="4" transform="rotate(45 400 56)"/><rect x="175" y="44" width="29" height="19" rx="4" transform="rotate(45 190 54)"/></g>
+      <path d="M216 247c91 16 154-34 174-159" stroke="#9acfc8" stroke-width="1.3" stroke-dasharray="3 7"/><circle cx="293" cy="168" r="4" fill="#c4ebdf"/>
+    </>}
+    {variant === 2 && <>
+      <g stroke="#436b85" stroke-width="1" opacity=".38">{Array.from({length:11},(_,i)=><><path d={`M${90+i*39} 50v220`}/><path d={`M90 ${50+i*22}h390`}/></>)}</g>
+      <g fill="#163b51" stroke="#63879d" stroke-width="1.5"><path d="M105 74h115v55H105Z M290 59h144v65H290Z M369 172h94v77h-94Z M122 203h90v53h-90Z"/><path d="M260 173h49v83h-49Z"/></g>
+      <path d="M148 164h94q13 0 13-13v-2q0-15 15-15h45q20 0 20 20v82q0 25 25 25h72" stroke="#a2deee" stroke-width="2" stroke-dasharray="4 7"/>
+      <g stroke="#b1e4f0" stroke-width="1.5"><path d="M133 151h31v24h-31Z M139 147v-5h19v5M130 154v18M167 154v18" fill="#244e66"/><circle cx="148" cy="162" r="5"/><circle cx="148" cy="162" r="34" opacity=".3"/><circle cx="148" cy="162" r="55" opacity=".15"/><path d="M433 254v-18m0 0 15 5-15 5"/></g>
+      <g fill="#78bfd5"><circle cx="253" cy="143" r="3"/><circle cx="335" cy="173" r="3"/><circle cx="335" cy="224" r="3"/></g>
+    </>}
+  </svg>
+  <span class="visual-note">Concept illustration · project media forthcoming</span>
 </div>

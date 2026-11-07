@@ -35,6 +35,7 @@ const posts = defineCollection({
     youtubeUrl: z.string().url().optional(),
     githubUrl: z.string().url().optional(),
     coverAlt: z.string().optional(),
+    coverPosition: z.string().default('center'),
     dateLabel: z.string().optional(),
     dateVerified: z.boolean().default(true),
   }),

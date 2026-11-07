@@ -8,7 +8,7 @@ interface Props { current?: string; }
 ---
 <nav class="site-nav" aria-label="Main navigation">
   <a class="jaja-brand" href={getAssetUrl('/')} aria-label="JaJa. Home">JaJa<span>.</span></a>
-  <Navigation />
+  <Navigation current={Astro.props.current} />
   <div class="nav-socials">
     <a href={portfolio.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub"><Github /></a>
     {portfolio.linkedin ? <a href={portfolio.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><LinkedIn /></a> : <span class="unavailable" aria-label="LinkedIn coming soon" aria-disabled="true"><LinkedIn /></span>}

@@ -1,9 +1,10 @@
 ---
 import { timeline } from '../data/portfolio';
+import PortfolioIcon from './PortfolioIcon.astro';
 ---
 <section class="journey" aria-labelledby="journey-title">
-  <div class="section-caption"><span class="eyebrow" id="journey-title">THE JOURNEY SO FAR</span><span>Learning. Building. Exploring.</span></div>
+  <div class="section-caption"><h2 id="journey-title">Education &amp; Key Experience</h2></div>
   <ol class="education-timeline">
-    {timeline.map(item => <li><span class="timeline-node" aria-hidden="true">{item.icon}</span><p class="timeline-date">{item.date}</p><h3>{item.title}</h3><p>{item.detail}</p></li>)}
+    {timeline.map((item, index) => <li class:list={{ 'is-upcoming': index === timeline.length - 1 }}><span class="timeline-node"><PortfolioIcon name={item.icon} /></span><span class="timeline-dot" aria-hidden="true"></span><p class="timeline-date">{item.date}</p><h3>{item.title}</h3><p>{item.detail}</p></li>)}
   </ol>
 </section>

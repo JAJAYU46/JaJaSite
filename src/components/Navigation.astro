@@ -1,10 +1,11 @@
 ---
 import { getAssetUrl } from '../config';
 import { portfolio } from '../data/portfolio';
+interface Props { current?: string; }
 const path = Astro.url.pathname.replace(/\/$/, '');
 const items = [{label: 'Home', path: '/'}, {label: 'Projects', path: '/projects/'}, {label: 'About', path: '/about/'}];
 ---
 <ul class="nav">
-  {items.map(item => <li><a href={getAssetUrl(item.path)} aria-current={path === getAssetUrl(item.path).replace(/\/$/, '') ? 'page' : undefined}>{item.label}</a></li>)}
+  {items.map(item => <li><a href={getAssetUrl(item.path)} aria-current={path === getAssetUrl(item.path).replace(/\/$/, '') ? 'page' : item.label === 'Projects' && Astro.props.current === 'post' ? 'location' : undefined}>{item.label}</a></li>)}
   <li>{portfolio.resume ? <a href={getAssetUrl(portfolio.resume)} target="_blank" rel="noopener noreferrer">Resume ↗</a> : <span class="unavailable" aria-disabled="true" title="Resume will be available soon">Resume ↗</span>}</li>
 </ul>

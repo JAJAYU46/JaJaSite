@@ -37,7 +37,7 @@ for path in pages:
             if not (target.is_file() or (target / 'index.html').is_file()):
                 errors.append(f'{path.relative_to(DIST)}: missing target: {value}')
             checked += 1
-        if tag == 'img' and not attrs.get('alt'):
+        if tag == 'img' and ('alt' not in attrs or (not attrs['alt'] and attrs.get('aria-hidden') != 'true')):
             errors.append(f'{path}: image without alt text')
 
 home = Page((DIST / 'index.html').read_text(encoding='utf-8'))
@@ -56,5 +56,12 @@ for slug in ['autonomous-tomato-harvesting', 'autonomous-navigation-object-searc
     assert iframe['src'].startswith('https://www.youtube-nocookie.com/embed/')
     assert 'autoplay' not in iframe['src']
 assert not (DIST / 'welcome/index.html').exists(), 'Template drafts must not be published'
+fast = (DIST / 'fast-livo2-slam-global-relocalization/index.html').read_text(encoding='utf-8')
+assert '<iframe' not in fast, 'Do not invent a FAST-LIVO2 video URL'
+assert 'fast-livo2-concept.svg' in fast, 'Keep the conceptual diagram available'
+for slug in ['fast-livo2-slam-global-relocalization', 'autonomous-tomato-harvesting']:
+    page = Page((DIST / slug / 'index.html').read_text(encoding='utf-8'))
+    assert any(t == 'nav' and a.get('aria-label') == 'Breadcrumb' for t, a in page.elements)
+    assert any(t == 'a' and a.get('rel') in ['prev','next'] for t, a in page.elements)
 assert not errors, '\n'.join(errors)
 print(f'PASS: {len(pages)-1} portfolio HTML pages, {len(cards)} project cards, {checked} internal links/assets, 3 featured cards, and both video heroes.')

@@ -46,7 +46,7 @@ Add regular Markdown sections when useful: System Architecture, My Contributions
 
 ## Images and video
 
-Place actual images under `public/assets/images/projects/`. Set `cover: assets/images/projects/your-actual-image.webp` and a descriptive `coverAlt`. Do not include `public/` or `/JaJaSite/` in frontmatter paths. Components apply the base URL automatically. Abstract CSS illustrations appear on cards without a cover; these are explicitly labeled, not project evidence. Articles without a video or cover simply begin with the title.
+Place actual images under `public/assets/images/projects/`. Set `cover: assets/images/projects/your-actual-image.webp` and a descriptive `coverAlt`. Optionally set `coverPosition: "60% 40%"` to adjust the crop in featured cards, standard cards, and article heroes. Do not include `public/` or `/JaJaSite/` in frontmatter paths. Components apply the base URL automatically. Distinct SVG concept illustrations appear on cards without a cover; these are explicitly labeled, not project evidence. Articles without a video or cover begin with the breadcrumb and a compact title area.
 
 For images inside Markdown, include the deployment base explicitly: `![Architecture description](/JaJaSite/assets/images/projects/architecture.svg)`. Update these Markdown links if the deployment base changes.
 
@@ -59,6 +59,12 @@ Edit `timeline` in `src/data/portfolio.ts`; content is separate from the timelin
 The same file contains `portfolio.github`, `linkedin`, `resume`, `email`, and `homeProjectCount`. Empty LinkedIn and resume values render unavailable controls; empty email hides Contact. Set LinkedIn to the real HTTPS profile URL and email to an address without `mailto:`. Add the final U.S. application PDF under `public/assets/resume/`, then set `resume` to that **actual** local PDF path without `public/`. Resume links open a new tab. No old CV is reused.
 
 Site title, description, favicon, and default Open Graph illustration are in `src/config.ts`. About content is `src/data/about.md`. Colors and responsive refinements are in `src/styles/portfolio.css`, layered after the original Casper styles.
+
+The original decorative glacier is `public/assets/images/glacier-landscape.svg`, shared by `GlacierArtwork.astro`. `OceanWaves.astro` supplies the wave layers. Timeline icon names in `src/data/portfolio.ts` map to the inline SVGs in `PortfolioIcon.astro`; changing an icon does not change milestone text or dates.
+
+Article H2 headings receive automatic CSS section numbers and dividers; keep writing normal Markdown headings. The FAST-LIVO2 conceptual flow is an editable SVG referenced only by its own Markdown article, with a caption clarifying that it is not a verified dependency graph. Replace it with a verified diagram when available.
+
+For confirmed measurements only, Markdown can include a `<div class="metric-highlights">` containing `<div class="metric-card"><strong>Verified value</strong><p>Metric name, test conditions, and source.</p></div>` blocks. The layout never generates metric values. No performance numbers have been added during the visual refinement.
 
 ## Preview, checks, and deployment
 
@@ -83,7 +89,7 @@ Do not modify or deploy the separate JaJaWebsite repository.
 
 ## Before public release
 
-- Supply the missing design reference if closer visual matching is needed.
+- The supplied composite design reference guides the glacier artwork, diagonal featured cards, and article hierarchy. Authentic project media is still needed to complete the image-driven design.
 - Add authentic project images, architecture diagrams, code links, and verified individual contributions.
 - Confirm timeline and project dates and complete the deliberately pending article sections.
 - Supply LinkedIn, email, and the final resume PDF.

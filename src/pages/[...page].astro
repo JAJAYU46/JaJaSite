@@ -6,6 +6,8 @@ import PostCard from '../components/PostCard.astro';
 import FeaturedProjectCard from '../components/FeaturedProjectCard.astro';
 import EducationTimeline from '../components/EducationTimeline.astro';
 import PortfolioLinks from '../components/PortfolioLinks.astro';
+import GlacierArtwork from '../components/GlacierArtwork.astro';
+import OceanWaves from '../components/OceanWaves.astro';
 import { getAssetUrl } from '../config';
 import { portfolio, sortProjects } from '../data/portfolio';
 export function getStaticPaths() { return [{ params: {page: undefined} }]; }
@@ -17,15 +19,15 @@ const more = projects.filter(p => p.data.showOnHome && !featured.some(f => f.id 
   <header class="site-header outer"><div class="inner"><SiteNav current="home" /></div></header>
   <main id="site-main" class="site-main">
     <section class="hero outer" aria-labelledby="intro-title">
-      <div class="hero-landscape" aria-hidden="true"><span></span><span></span><span></span></div>
+      <GlacierArtwork placement="hero" /><OceanWaves />
       <div class="inner hero-content"><p class="eyebrow">ROBOTICS <span>·</span> SOFTWARE <span>·</span> AUTONOMY</p>
         <h1 id="intro-title">Hi, I'm <span>Chia-Jung Yu.</span></h1>
         <p class="hero-description">I'm an incoming M.S. Robotics student at Boston University with a background in Bio-Mechatronics Engineering at National Taiwan University. I enjoy building autonomous robotic systems, from perception and SLAM to real-world software integration.</p>
-        <PortfolioLinks /><p class="hero-footnote">From understanding the world to helping robots move through it.</p>
+        <PortfolioLinks />
       </div>
     </section>
     <div class="outer"><div class="inner"><EducationTimeline />
-      <section class="portfolio-section" aria-labelledby="featured-title"><div class="section-heading"><div><p class="eyebrow">SELECTED WORK / 01—03</p><h2 id="featured-title">Featured Robotics Projects</h2></div><p>Perception meets action.</p></div>
+      <section class="portfolio-section" aria-labelledby="featured-title"><div class="section-heading"><div><p class="eyebrow">SELECTED WORK / 01—03</p><h2 id="featured-title">Featured Robotics Projects</h2></div><a class="text-link" href={getAssetUrl('/projects/')}>View all projects <span aria-hidden="true">→</span></a></div>
         <div class="featured-list">{featured.map((post,index) => <FeaturedProjectCard post={post} index={index} />)}</div>
       </section>
       <section class="portfolio-section more-projects" aria-labelledby="more-title"><div class="section-heading"><div><p class="eyebrow">MORE TO EXPLORE</p><h2 id="more-title">A wider engineering toolkit.</h2></div><a class="text-link" href={getAssetUrl('/projects/')}>View All Projects ↗</a></div><div class="post-feed standard-feed">{more.map(post => <PostCard post={post} />)}</div></section>

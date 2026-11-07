@@ -13,11 +13,11 @@ export const categories = [
   { id: 'embedded', title: 'Embedded & Hardware Engineering', description: 'Where code meets circuits and physical systems.' },
 ];
 export const timeline = [
-  { date: '2021–2027', title: 'National Taiwan University', detail: 'Bio-Mechatronics Engineering', icon: '01' },
-  { date: '2023–2025', title: 'Robotics Research', detail: 'Robots and Medical Mechatronics Lab', icon: '02' },
-  { date: '2025–2026', title: 'International Exchange', detail: 'Warsaw University of Technology · Wageningen University', icon: '03' },
-  { date: '2026', title: 'Robotics Software', detail: 'FAST-LIVO2, loop closure & global relocalization', icon: '04' },
-  { date: 'Spring 2027', title: 'Boston University', detail: 'Incoming M.S. in Robotics', icon: '05' },
+  { date: '2021–2027', title: 'National Taiwan University', detail: 'Bio-Mechatronics Engineering', icon: 'education' },
+  { date: '2023–2025', title: 'Robotics Research', detail: 'Robots and Medical Mechatronics Lab', icon: 'research' },
+  { date: '2025–2026', title: 'International Exchange', detail: 'Warsaw University of Technology · Wageningen University', icon: 'exchange' },
+  { date: '2026', title: 'Robotics Software', detail: 'FAST-LIVO2, loop closure & global relocalization', icon: 'robotics' },
+  { date: 'Spring 2027', title: 'Boston University', detail: 'Incoming M.S. in Robotics', icon: 'university' },
 ];
 export function sortProjects(a: {data: {order: number}}, b: {data: {order: number}}) {
   return a.data.order - b.data.order;

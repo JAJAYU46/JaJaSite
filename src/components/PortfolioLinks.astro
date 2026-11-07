@@ -3,10 +3,11 @@ import { portfolio } from '../data/portfolio';
 import { getAssetUrl } from '../config';
 import Github from './icons/Github.astro';
 import LinkedIn from './icons/LinkedIn.astro';
+import PortfolioIcon from './PortfolioIcon.astro';
 ---
 <div class="hero-actions">
   <a class="pill primary" href={getAssetUrl('/projects/')}>View Projects <span aria-hidden="true">↗</span></a>
   <a class="pill" href={portfolio.github} target="_blank" rel="noopener noreferrer"><Github /> GitHub</a>
   {portfolio.linkedin ? <a class="pill" href={portfolio.linkedin} target="_blank" rel="noopener noreferrer"><LinkedIn /> LinkedIn</a> : <span class="pill unavailable" aria-disabled="true" title="LinkedIn will be available soon"><LinkedIn /> LinkedIn</span>}
-  {portfolio.resume ? <a class="pill" href={getAssetUrl(portfolio.resume)} target="_blank" rel="noopener noreferrer">Resume ↗</a> : <span class="pill unavailable" aria-disabled="true" title="Resume will be available soon">Resume ↗</span>}
+  {portfolio.resume ? <a class="pill" href={getAssetUrl(portfolio.resume)} target="_blank" rel="noopener noreferrer"><PortfolioIcon name="document" /> Resume ↗</a> : <span class="pill unavailable" aria-disabled="true" title="Resume will be available soon"><PortfolioIcon name="document" /> Resume ↗</span>}
 </div>

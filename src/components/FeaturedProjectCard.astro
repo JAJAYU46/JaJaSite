@@ -11,8 +11,8 @@ const {post, index} = Astro.props;
       <div class="featured-kicker"><span>{String(index + 1).padStart(2, '0')}</span> ROBOTICS & AUTONOMOUS SYSTEMS</div>
       <h3>{post.data.title}</h3><p>{post.data.description}</p>
       <ul class="tech-tags" aria-label="Technologies">{post.data.technologies.map(tech => <li>{tech}</li>)}</ul>
-      <span class="explore-link">Explore Project <span aria-hidden="true">↗</span></span>
+      <span class="explore-link">Explore Project <span class="project-arrow" aria-hidden="true">→</span></span>
     </div>
-    <div class="featured-media">{post.data.cover ? <img src={getAssetUrl(post.data.cover)} alt={post.data.coverAlt || post.data.title} loading="lazy" width="800" height="650" /> : <ProjectVisual title={post.data.title} category={post.data.projectCategory} />}</div>
+    <div class="featured-media" style={{ '--cover-position': post.data.coverPosition }}>{post.data.cover ? <img src={getAssetUrl(post.data.cover)} alt={post.data.coverAlt || post.data.title} loading="lazy" width="800" height="500" /> : <ProjectVisual title={post.data.title} category={post.data.projectCategory} variant={post.data.featuredOrder ? post.data.featuredOrder - 1 : undefined} />}</div>
   </a>
 </article>

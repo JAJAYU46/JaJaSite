@@ -32,10 +32,10 @@ const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
 <article class={`post-card ${indexClass} ${!cover ? 'no-image' : ''}`}>
     {cover && (
         <a class="post-card-image-link" href={postLink}>
-            <img class="post-card-image" src={getAssetUrl(cover)} alt={post.data.coverAlt || title} loading="lazy" width="640" height="400" />
+            <img class="post-card-image" src={getAssetUrl(cover)} alt={post.data.coverAlt || title} style={{objectPosition: post.data.coverPosition}} loading="lazy" width="640" height="400" />
         </a>
     )}
-    {!cover && post.data.projectCategory && <a class="post-card-image-link" href={postLink} aria-label={`Explore ${title}`}><ProjectVisual title={title} category={post.data.projectCategory} /></a>}
+    {!cover && post.data.projectCategory && <a class="post-card-image-link" href={postLink} aria-label={`Explore ${title}`}><ProjectVisual title={title} category={post.data.projectCategory} variant={post.data.featuredOrder ? post.data.featuredOrder - 1 : undefined} /></a>}
     <div class="post-card-content">
         <a class="post-card-content-link" href={postLink}>
             <header class="post-card-header">

@@ -29,6 +29,11 @@ A LiDAR-Visual-Inertial SLAM system with loop closure and map-based global reloc
 
 ## System Architecture
 
+<figure class="architecture-figure" tabindex="0" aria-label="Scrollable conceptual architecture diagram">
+  <img src="/JaJaSite/assets/images/fast-livo2-concept.svg" alt="Conceptual flow from LiDAR, camera and IMU sensors through FAST-LIVO2 odometry to loop closure and map-based relocalization." loading="lazy" width="1000" height="230" />
+  <figcaption>Conceptual overview · simplified flow, not a verified module-level dependency graph.</figcaption>
+</figure>
+
 The project combines LiDAR-visual-inertial SLAM with loop detection, registration, pose graph optimization, and map-based relocalization. A system diagram, module interfaces, and integration details are being prepared.
 
 ## My Contributions

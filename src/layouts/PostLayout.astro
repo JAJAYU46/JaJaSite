@@ -8,7 +8,9 @@ import { categories } from '../data/portfolio';
 import SiteNav from '../components/SiteNav.astro';
 import PostCard from '../components/PostCard.astro';
 import SubscribeForm from '../components/SubscribeForm.astro';
-import Infinity from '../components/icons/Infinity.astro';
+import GlacierArtwork from '../components/GlacierArtwork.astro';
+import OceanWaves from '../components/OceanWaves.astro';
+import PortfolioIcon from '../components/PortfolioIcon.astro';
 import { SITE_CONFIG, getAssetUrl } from '../config';
 
 interface Props {
@@ -37,7 +39,10 @@ const relatedPosts = primaryTag
   ? allPosts.filter(p => p.id !== post.id && p.data.tags.includes(primaryTag))
   : [];
 const relatedCount = relatedPosts.length;
-const topRelated = relatedPosts.slice(0, 3);
+const relatedCards = [...relatedPosts, nextPost, prevPost]
+  .filter((entry): entry is CollectionEntry<'posts'> => !!entry)
+  .filter((entry, index, entries) => entries.findIndex(p => p.id === entry.id) === index)
+  .slice(0, 3);
 
 // Format date
 const formattedDate = new Date(date).toLocaleDateString('en-GB', {
@@ -69,28 +74,22 @@ const isDisqusEnabled = disqus !== false && SITE_CONFIG.disqus;
     <!-- Main Content Area -->
     <main id="site-main" class="site-main outer" role="main">
         <div class="inner">
+            <nav class="project-breadcrumb" aria-label="Breadcrumb"><a href={getAssetUrl('/projects/')}>Projects</a><span aria-hidden="true">›</span><span aria-current="page">{title}</span></nav>
             <article class={`post-full ${tags.map(t => `tag-${t.toLowerCase().replace(/\s+/g, '-')}`).join(' ')} ${subclass || ''} ${!cover ? 'no-image' : ''}`}>
-                {youtubeEmbed(post.data.youtubeUrl) ? <ResponsiveYouTubeEmbed url={post.data.youtubeUrl!} title={title} /> : cover && <figure class="post-full-image"><img src={getAssetUrl(cover)} alt={post.data.coverAlt || title} fetchpriority="high" loading="eager" /></figure>}
-                <header class="post-full-header">
-                    <section class="post-full-meta">
-                        {post.data.dateVerified && <time class="post-full-meta-date" datetime={new Date(date).toISOString().split('T')[0]}>{post.data.dateLabel || formattedDate}</time>}
-                        {post.data.projectCategory && <span>{categories.find(c => c.id === post.data.projectCategory)?.title}</span>}
-                        {tags.length > 0 && (
-                            <>
-                                <span class="date-divider">/</span>
-                                {tags.map((tag, i) => (
-                                  <>
-                                    <a href={getAssetUrl(`/tag/${tag.toLowerCase().replace(/\s+/g, '-')}/`)}>{tag.toUpperCase()}</a>
-                                    {i < tags.length - 1 && <span>, </span>}
-                                  </>
-                                ))}
-                            </>
-                        )}
-                    </section>
-                    <h1 class="post-full-title">{title}</h1>
-                    {description && <p class="project-summary">{description}</p>}
-                    <ul class="tech-tags">{post.data.technologies.map(tech => <li>{tech}</li>)}</ul>
-                    {post.data.githubUrl && <a class="pill" href={post.data.githubUrl} target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a>}
+                {youtubeEmbed(post.data.youtubeUrl) ? <ResponsiveYouTubeEmbed url={post.data.youtubeUrl!} title={title} /> : cover && <figure class="post-full-image"><img src={getAssetUrl(cover)} alt={post.data.coverAlt || title} style={{objectPosition: post.data.coverPosition}} fetchpriority="high" loading="eager" /></figure>}
+                <header class="post-full-header project-heading">
+                    <GlacierArtwork placement="article" />
+                    <div class="project-heading-copy">
+                        <h1 class="post-full-title">{title}</h1>
+                        {description && <p class="project-summary">{description}</p>}
+                        <ul class="tech-tags" aria-label="Technologies">{post.data.technologies.map(tech => <li>{tech}</li>)}</ul>
+                        <div class="post-full-meta">
+                            {post.data.dateVerified && <span class="project-date"><PortfolioIcon name="calendar" /><time datetime={new Date(date).toISOString().split('T')[0]}>{post.data.dateLabel || formattedDate}</time></span>}
+                            {post.data.projectCategory && <a class="project-category-label" href={getAssetUrl(`/tag/${post.data.projectCategory}/`)}><PortfolioIcon name="tag" />{categories.find(c => c.id === post.data.projectCategory)?.title || post.data.projectCategory}</a>}
+                            {!post.data.projectCategory && tags.map(tag => <a href={getAssetUrl(`/tag/${tag.toLowerCase().replace(/\s+/g, '-')}/`)}>{tag}</a>)}
+                        </div>
+                        {post.data.githubUrl && <a class="pill" href={post.data.githubUrl} target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a>}
+                    </div>
                 </header>
 
                 <section class="post-full-content">
@@ -181,91 +180,15 @@ const isDisqusEnabled = disqus !== false && SITE_CONFIG.disqus;
         </div>
     </main>
 
-    <!-- Links to Previous/Next posts -->
-    <aside class="read-next outer">
+    <aside class="read-next outer" aria-label="Related projects">
+        <OceanWaves />
         <div class="inner">
-            <div class="read-next-feed">
-                <!-- Related posts card -->
-                {relatedCount > 0 && primaryTag && (
-                    <article class="read-next-card" style={SITE_CONFIG.cover ? `background-image: url(${getAssetUrl(SITE_CONFIG.cover)})` : cover ? `background-image: url(${getAssetUrl(cover)})` : ''}>
-                        <header class="read-next-card-header">
-                            <small class="read-next-card-header-sitetitle">&mdash; {SITE_CONFIG.title} &mdash;</small>
-                            <h3 class="read-next-card-header-title"><a href={getAssetUrl(`/tag/${primaryTag.toLowerCase().replace(/\s+/g, '-')}/`)}>{primaryTag}</a></h3>
-                        </header>
-                        <div class="read-next-divider">
-                            <Infinity />
-                        </div>
-                        <div class="read-next-card-content">
-                            <ul>
-                                {topRelated.map(p => (
-                                    <li><a href={getAssetUrl(`/${p.id}/`)}>{p.data.title}</a></li>
-                                ))}
-                            </ul>
-                        </div>
-                        <footer class="read-next-card-footer">
-                            <a href={getAssetUrl(`/tag/${primaryTag.toLowerCase().replace(/\s+/g, '-')}/`)}>
-                                See {relatedCount > 1 ? `all ${relatedCount} related posts →` : '1 related post →'}
-                            </a>
-                        </footer>
-                    </article>
-                )}
-
-                <!-- Next/Prev cards -->
-                {nextPost && <PostCard post={nextPost} indexClass="post-card-next" />}
-                {prevPost && <PostCard post={prevPost} indexClass="post-card-previous" />}
-            </div>
+            <div class="section-heading"><div><p class="eyebrow">CONTINUE EXPLORING</p><h2>Related Projects</h2></div>{relatedCount > 0 && primaryTag && <a class="text-link" href={getAssetUrl(`/tag/${primaryTag.toLowerCase().replace(/\s+/g, '-')}/`)}>Explore {primaryTag} projects <span aria-hidden="true">→</span></a>}</div>
+            <div class="post-feed standard-feed">{relatedCards.map(post => <PostCard post={post} />)}</div>
+            <nav class="project-pagination" aria-label="Previous and next projects">
+                {prevPost && <a href={getAssetUrl(`/${prevPost.id}/`)} rel="prev"><span>← Previous project</span>{prevPost.data.title}</a>}
+                {nextPost && <a href={getAssetUrl(`/${nextPost.id}/`)} rel="next"><span>Next project →</span>{nextPost.data.title}</a>}
+            </nav>
         </div>
     </aside>
-
-    <!-- Floating Header -->
-
 </Layout>
-
-<script>
-  // Client-side Javascript: Scroll progress and Floating Header
-  document.addEventListener('astro:page-load', () => {
-    const progressBar = document.querySelector('progress') as HTMLProgressElement | null;
-    const header = document.querySelector('.floating-header');
-    const title = document.querySelector('.post-full-title') as HTMLElement | null;
-
-    if (progressBar && header && title) {
-      let ticking = false;
-
-      const update = () => {
-        const trigger = title.getBoundingClientRect().top + window.scrollY;
-        const triggerOffset = title.offsetHeight + 35;
-        const progressMax = document.documentElement.scrollHeight - window.innerHeight;
-
-        // show/hide floating header
-        if (window.scrollY >= trigger + triggerOffset) {
-          header.classList.add('floating-active');
-        } else {
-          header.classList.remove('floating-active');
-        }
-
-        progressBar.setAttribute('max', progressMax.toString());
-        progressBar.setAttribute('value', window.scrollY.toString());
-
-        ticking = false;
-      };
-
-      const onScroll = () => {
-        if (!ticking) {
-          window.requestAnimationFrame(update);
-          ticking = true;
-        }
-      };
-
-      const cleanup = () => {
-        window.removeEventListener('scroll', onScroll);
-        window.removeEventListener('resize', update);
-        document.removeEventListener('astro:before-swap', cleanup);
-      };
-      document.addEventListener('astro:before-swap', cleanup);
-
-      window.addEventListener('scroll', onScroll, { passive: true });
-      window.addEventListener('resize', update, { passive: true });
-      update();
-    }
-  });
-</script>
