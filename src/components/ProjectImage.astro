@@ -1,0 +1,34 @@
+---
+import { getAssetUrl } from '../config';
+import ProjectVisual from './ProjectVisual.astro';
+interface Props {
+  src: string; alt: string; title: string; category?: string; position?: string;
+  variant?: number; class?: string; eager?: boolean; width?: number; height?: number;
+}
+const { src, alt, title, category, position = 'center', variant, eager = false, width = 800, height = 500 } = Astro.props;
+---
+<div class="project-image" data-project-image>
+  <img class={Astro.props.class} src={getAssetUrl(src)} alt={alt} style={{ objectPosition: position }} width={width} height={height} loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : 'auto'} referrerpolicy="no-referrer" />
+  <div class="project-image-fallback" hidden>
+    <ProjectVisual title={title} category={category} variant={variant} notice="Source image unavailable · concept illustration" />
+  </div>
+</div>
+<script>
+  function setupProjectImages() {
+    document.querySelectorAll<HTMLElement>('[data-project-image]').forEach(container => {
+      const image = container.querySelector<HTMLImageElement>('img');
+      const fallback = container.querySelector<HTMLElement>('.project-image-fallback');
+      if (!image || !fallback || image.dataset.fallbackReady) return;
+      image.dataset.fallbackReady = 'true';
+      const showFallback = () => {
+        image.hidden = true;
+        fallback.hidden = false;
+        container.classList.add('is-unavailable');
+      };
+      image.addEventListener('error', showFallback, { once: true });
+      if (image.complete && image.naturalWidth === 0) showFallback();
+    });
+  }
+  setupProjectImages();
+  document.addEventListener('astro:page-load', setupProjectImages);
+</script>

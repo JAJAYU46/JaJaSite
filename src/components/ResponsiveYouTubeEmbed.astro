@@ -1,7 +1,7 @@
 ---
 import { youtubeEmbed } from '../utils/youtube';
-interface Props { url: string; title: string; }
-const { url, title } = Astro.props;
+interface Props { url: string; title: string; label?: string; }
+const { url, title, label = 'Project demonstration' } = Astro.props;
 const embed = youtubeEmbed(url);
 ---
-{embed && <figure class="video-hero"><iframe src={embed} title={`${title} — project demonstration`} loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe><figcaption><span>PROJECT DEMONSTRATION</span><a href={url} target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></figcaption></figure>}
+{embed && <figure class="video-hero"><iframe src={embed} title={`${title} — ${label}`} loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe><figcaption><span>{label.toUpperCase()}</span><a href={url} target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></figcaption></figure>}

@@ -46,11 +46,33 @@ Add regular Markdown sections when useful: System Architecture, My Contributions
 
 ## Images and video
 
+Most imported projects now use original external Drive thumbnail URLs directly. Keep the entire URL unchanged in `cover`, for example `cover: "https://drive.google.com/thumbnail?id=YOUR_FILE_ID"`. `getAssetUrl` leaves HTTPS URLs intact. No Astro remote-image optimization configuration is needed because these are ordinary responsive `<img>` elements. Verify sharing in a signed-out browser; an image failing here does not automatically mean that its Google Drive sharing is private.
+
+`ProjectImage.astro` handles failed requests in cards, cover heroes, and galleries: it hides the broken image and displays a labeled neutral concept illustration. The original URL remains in frontmatter and in Resources. Do not replace inaccessible images with unrelated photos. Original Drive thumbnails may be only about 220 pixels; larger cards can therefore look soft even when the CSS is correct.
+
 Place actual images under `public/assets/images/projects/`. Set `cover: assets/images/projects/your-actual-image.webp` and a descriptive `coverAlt`. Optionally set `coverPosition: "60% 40%"` to adjust the crop in featured cards, standard cards, and article heroes. Do not include `public/` or `/JaJaSite/` in frontmatter paths. Components apply the base URL automatically. Distinct SVG concept illustrations appear on cards without a cover; these are explicitly labeled, not project evidence. Articles without a video or cover begin with the breadcrumb and a compact title area.
 
 For images inside Markdown, include the deployment base explicitly: `![Architecture description](/JaJaSite/assets/images/projects/architecture.svg)`. Update these Markdown links if the deployment base changes.
 
 Set `youtubeUrl` to a YouTube watch/share URL or playlist URL. The article displays a responsive 16:9 privacy-enhanced iframe before the title, with lazy loading, no autoplay, and a YouTube fallback link. Remove the field to restore the normal image hero. `githubUrl` adds an optional source link. Do not guess repository URLs.
+
+Optional `youtubeLabel` distinguishes a demonstration from a presentation, such as `youtubeLabel: "ACPA11 research presentation"`. Keep additional videos and all reports in `resources`; links open in a new tab with `noopener noreferrer`.
+
+```yaml
+resources:
+  - label: Full Project Report
+    url: https://drive.google.com/file/d/YOUR_FILE_ID/view
+  - label: Explanatory Presentation
+    url: https://youtu.be/YOUR_ACTUAL_VIDEO_ID
+gallery:
+  - url: https://drive.google.com/thumbnail?id=YOUR_ADDITIONAL_IMAGE_ID
+    alt: A factual description of the project image
+    caption: Optional context and contribution credit
+```
+
+`resources` and `gallery` default to empty lists, and `youtubeLabel` is optional. Empty sections are omitted. Gallery images use the same responsive error handling as covers. Keep each original URL in one canonical Markdown article; the five drone records belong in `mini-camera-drone.md` with individual/team credit in the appropriate subsections.
+
+The import inventory, source comparison, access limitations, and unchanged route list are in `PROJECT_IMPORT_REPORT.md`. `docs/sources/JaJaSite_project_source_data.json` is an archived reference, not a live database. Edit Markdown for future updates; do not rerun a migration over newer manual writing.
 
 ## Timeline, links, resume, and identity
 
@@ -78,6 +100,7 @@ pnpm run dev
 pnpm run build
 pnpm exec tsc --noEmit
 python scripts/verify_portfolio.py
+python scripts/verify_project_import.py
 pnpm run preview
 ```
 

@@ -1,0 +1,21 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import ProjectImage from './ProjectImage.astro';
+interface Props { post: CollectionEntry<'posts'>; }
+const { post } = Astro.props;
+---
+{post.data.gallery.length > 0 && <>
+  <h2>Images</h2>
+  <div class="project-gallery">
+    {post.data.gallery.map(item => <figure>
+      <ProjectImage src={item.url} alt={item.alt} title={post.data.title} category={post.data.projectCategory} />
+      <figcaption>{item.caption || item.alt} <a href={item.url} target="_blank" rel="noopener noreferrer">View source image ↗</a></figcaption>
+    </figure>)}
+  </div>
+</>}
+{post.data.resources.length > 0 && <>
+  <h2>Resources</h2>
+  <ul class="project-resources">
+    {post.data.resources.map(resource => <li><a href={resource.url} target="_blank" rel="noopener noreferrer">{resource.label}<span aria-hidden="true"> ↗</span></a></li>)}
+  </ul>
+</>}

@@ -7,6 +7,8 @@ import { youtubeEmbed } from '../utils/youtube';
 import { categories } from '../data/portfolio';
 import SiteNav from '../components/SiteNav.astro';
 import PostCard from '../components/PostCard.astro';
+import ProjectImage from '../components/ProjectImage.astro';
+import ProjectResources from '../components/ProjectResources.astro';
 import SubscribeForm from '../components/SubscribeForm.astro';
 import GlacierArtwork from '../components/GlacierArtwork.astro';
 import OceanWaves from '../components/OceanWaves.astro';
@@ -76,7 +78,7 @@ const isDisqusEnabled = disqus !== false && SITE_CONFIG.disqus;
         <div class="inner">
             <nav class="project-breadcrumb" aria-label="Breadcrumb"><a href={getAssetUrl('/projects/')}>Projects</a><span aria-hidden="true">›</span><span aria-current="page">{title}</span></nav>
             <article class={`post-full ${tags.map(t => `tag-${t.toLowerCase().replace(/\s+/g, '-')}`).join(' ')} ${subclass || ''} ${!cover ? 'no-image' : ''}`}>
-                {youtubeEmbed(post.data.youtubeUrl) ? <ResponsiveYouTubeEmbed url={post.data.youtubeUrl!} title={title} /> : cover && <figure class="post-full-image"><img src={getAssetUrl(cover)} alt={post.data.coverAlt || title} style={{objectPosition: post.data.coverPosition}} fetchpriority="high" loading="eager" /></figure>}
+                {youtubeEmbed(post.data.youtubeUrl) ? <ResponsiveYouTubeEmbed url={post.data.youtubeUrl!} title={title} label={post.data.youtubeLabel} /> : cover && <figure class="post-full-image"><ProjectImage src={cover} alt={post.data.coverAlt || title} title={title} category={post.data.projectCategory} position={post.data.coverPosition} eager={true} width={1200} height={675} /></figure>}
                 <header class="post-full-header project-heading">
                     <GlacierArtwork placement="article" />
                     <div class="project-heading-copy">
@@ -96,6 +98,7 @@ const isDisqusEnabled = disqus !== false && SITE_CONFIG.disqus;
                     <div class="kg-card-markdown">
                         <!-- Render post body -->
                         <slot />
+                        <ProjectResources post={post} />
                     </div>
                 </section>
 

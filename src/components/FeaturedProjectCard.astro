@@ -2,6 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 import { getAssetUrl } from '../config';
 import ProjectVisual from './ProjectVisual.astro';
+import ProjectImage from './ProjectImage.astro';
 interface Props { post: CollectionEntry<'posts'>; index: number; }
 const {post, index} = Astro.props;
 ---
@@ -13,6 +14,6 @@ const {post, index} = Astro.props;
       <ul class="tech-tags" aria-label="Technologies">{post.data.technologies.map(tech => <li>{tech}</li>)}</ul>
       <span class="explore-link">Explore Project <span class="project-arrow" aria-hidden="true">→</span></span>
     </div>
-    <div class="featured-media" style={{ '--cover-position': post.data.coverPosition }}>{post.data.cover ? <img src={getAssetUrl(post.data.cover)} alt={post.data.coverAlt || post.data.title} loading="lazy" width="800" height="500" /> : <ProjectVisual title={post.data.title} category={post.data.projectCategory} variant={post.data.featuredOrder ? post.data.featuredOrder - 1 : undefined} />}</div>
+    <div class="featured-media" style={{ '--cover-position': post.data.coverPosition }}>{post.data.cover ? <ProjectImage src={post.data.cover} alt={post.data.coverAlt || post.data.title} title={post.data.title} category={post.data.projectCategory} position={post.data.coverPosition} variant={post.data.featuredOrder ? post.data.featuredOrder - 1 : undefined} /> : <ProjectVisual title={post.data.title} category={post.data.projectCategory} variant={post.data.featuredOrder ? post.data.featuredOrder - 1 : undefined} />}</div>
   </a>
 </article>

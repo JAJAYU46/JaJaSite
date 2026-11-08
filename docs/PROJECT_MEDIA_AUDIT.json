@@ -1,0 +1,375 @@
+{
+  "checkedAt": "2026-11-07T21:35:39.786264+00:00",
+  "method": "Anonymous HTTP GET without cookies or credentials; up to 32 KB read per URL. No images saved. HTTP success alone does not verify document content, browser image rendering, or video playback.",
+  "resources": [
+    {
+      "url": "https://drive.google.com/thumbnail?id=1f0VH6YPzg5ryQSsu3cFbMRR37ux1_QHh",
+      "kind": "image",
+      "projects": [
+        "JaJa’s Original Website"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Rendered successfully with nonzero natural dimensions in project-index DOM; no fallback state."
+    },
+    {
+      "url": "https://drive.google.com/thumbnail?id=1ondk1BARA9rqjXV9rQWgMWPY80q7iw43",
+      "kind": "image",
+      "projects": [
+        "Autonomous Tomato Harvesting with Next-Best-View Planning"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Rendered successfully with nonzero natural dimensions in project-index DOM; no fallback state."
+    },
+    {
+      "url": "https://drive.google.com/file/d/1fQugP5H3UlYT9QG-rZcHBkgtyob6sIOC/view?usp=sharing",
+      "kind": "document",
+      "projects": [
+        "Autonomous Tomato Harvesting with Next-Best-View Planning"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Relevant report text read in Drive preview with a Sign In link visible.",
+      "reviewedPages": "Cover, abstract/contents, pp. 7-10"
+    },
+    {
+      "url": "https://youtu.be/FapvpN5wpkc",
+      "kind": "video",
+      "projects": [
+        "Autonomous Tomato Harvesting with Next-Best-View Planning"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Not independently verified for playback/access during this import."
+    },
+    {
+      "url": "https://drive.google.com/thumbnail?id=1PXNhLXDe44UM_tQ-Gt_kZ1HHoryojqli",
+      "kind": "image",
+      "projects": [
+        "Scout Mini Library Navigation"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Rendered successfully with nonzero natural dimensions in project-index DOM; no fallback state."
+    },
+    {
+      "url": "https://drive.google.com/file/d/19wtMZeI3QJxFg0ZKVo2OYzOaOm2WOCfG/view?usp=drive_link",
+      "kind": "document",
+      "projects": [
+        "Scout Mini Library Navigation"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Relevant report text read in Drive preview with a Sign In link visible.",
+      "reviewedPages": "pp. 1-3"
+    },
+    {
+      "url": "https://youtu.be/3tU8JCqhwRc",
+      "kind": "video",
+      "projects": [
+        "Scout Mini Library Navigation"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Not independently verified for playback/access during this import."
+    },
+    {
+      "url": "https://youtu.be/xwccUGWfD4A",
+      "kind": "video",
+      "projects": [
+        "Scout Mini Library Navigation"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Not independently verified for playback/access during this import."
+    },
+    {
+      "url": "https://drive.google.com/thumbnail?id=13crIqDnknShLcWaorVXfxRoiGhUkQlqX",
+      "kind": "image",
+      "projects": [
+        "Autonomous Navigation & Object Search"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Rendered successfully with nonzero natural dimensions in project-index DOM; no fallback state."
+    },
+    {
+      "url": "https://www.youtube.com/playlist?list=PLYVkuRLVSj2VRustcw-vZm7mXflJBX_HD",
+      "kind": "video",
+      "projects": [
+        "Autonomous Navigation & Object Search"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Not independently verified for playback/access during this import."
+    },
+    {
+      "url": "https://youtu.be/LMYQcKOfj8E",
+      "kind": "video",
+      "projects": [
+        "Autonomous Navigation & Object Search"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Not independently verified for playback/access during this import."
+    },
+    {
+      "url": "https://drive.google.com/thumbnail?id=1Dv1S7uv-TdjwtX78FQYBj2Dd3K90pP8Z",
+      "kind": "image",
+      "projects": [
+        "Robotic Arm Block Stacking"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Rendered successfully with nonzero natural dimensions in project-index DOM; no fallback state."
+    },
+    {
+      "url": "https://drive.google.com/file/d/1PDHNC-LprKW0frabGmJ4Pirf39SuaQLV/view?usp=drive_link",
+      "kind": "document",
+      "projects": [
+        "Robotic Arm Block Stacking"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Relevant report text read in Drive preview with a Sign In link visible.",
+      "reviewedPages": "pp. 1-3"
+    },
+    {
+      "url": "https://youtu.be/6URSk8AAQL0?si=6KHBcef8ERqBiobd",
+      "kind": "video",
+      "projects": [
+        "Robotic Arm Block Stacking"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Not independently verified for playback/access during this import."
+    },
+    {
+      "url": "https://drive.google.com/thumbnail?id=1J3ygOVboQi_el-7ULdxhvypRkl24t2yU",
+      "kind": "image",
+      "projects": [
+        "Control Box Design & Fabrication"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Rendered successfully with nonzero natural dimensions in project-index DOM; no fallback state."
+    },
+    {
+      "url": "https://drive.google.com/thumbnail?id=1hGEKCk--jENOWLtvZx0is1fOZrz-lmxF",
+      "kind": "image",
+      "projects": [
+        "Blockchain-Based Vehicle Monitoring System"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Rendered successfully with nonzero natural dimensions in project-index DOM; no fallback state."
+    },
+    {
+      "url": "https://drive.google.com/file/d/1wRC-P0oy873NkSm0TEB4VckjptFcTR2g/view?usp=drive_link",
+      "kind": "document",
+      "projects": [
+        "Blockchain-Based Vehicle Monitoring System"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Relevant report text read in Drive preview with a Sign In link visible.",
+      "reviewedPages": "Cover/contents, pp. 14-18"
+    },
+    {
+      "url": "https://drive.google.com/thumbnail?id=13qPVCq-X1g7r0voGRkdB6FWfwh88xxwu",
+      "kind": "image",
+      "projects": [
+        "Cinema Reservation System"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Rendered successfully with nonzero natural dimensions in project-index DOM; no fallback state."
+    },
+    {
+      "url": "https://youtu.be/FpBPMXGWN6Q",
+      "kind": "video",
+      "projects": [
+        "Cinema Reservation System"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Not independently verified for playback/access during this import."
+    },
+    {
+      "url": "https://drive.google.com/thumbnail?id=1jovf81fhFwjOYr1Im_jEMW0g7iQ57Jue",
+      "kind": "image",
+      "projects": [
+        "National Park Database Management System"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Rendered successfully with nonzero natural dimensions in project-index DOM; no fallback state."
+    },
+    {
+      "url": "https://drive.google.com/file/d/18CwpuQ_oQD54med0io9_ULwXcvUZKFRK/view?usp=drive_link",
+      "kind": "document",
+      "projects": [
+        "National Park Database Management System"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Relevant report text read in Drive preview with a Sign In link visible.",
+      "reviewedPages": "pp. 1-3"
+    },
+    {
+      "url": "https://drive.google.com/thumbnail?id=1a1MB7NaofM5HRwrkvasniyOb-Rmgqg_3",
+      "kind": "image",
+      "projects": [
+        "Industrial Standards AI Agent"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Rendered successfully with nonzero natural dimensions in project-index DOM; no fallback state."
+    },
+    {
+      "url": "https://drive.google.com/file/d/1UCBANRYIlkimmNB1PdLxv-PzzwGbCck9/view?usp=drive_link",
+      "kind": "document",
+      "projects": [
+        "Industrial Standards AI Agent"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Relevant report text read in Drive preview with a Sign In link visible.",
+      "reviewedPages": "pp. 1-2"
+    },
+    {
+      "url": "https://drive.google.com/thumbnail?id=1OwIg8zizTbKgoPVoCQdg5-qSa2W8SCQC",
+      "kind": "image",
+      "projects": [
+        "Phone Price Prediction Model"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Rendered successfully with nonzero natural dimensions in project-index DOM; no fallback state."
+    },
+    {
+      "url": "https://drive.google.com/file/d/1rfT6JBAptdvk5ejfXbNdD88YO85FM_8C/view?usp=drive_link",
+      "kind": "document",
+      "projects": [
+        "Phone Price Prediction Model"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Relevant report text read in Drive preview with a Sign In link visible.",
+      "reviewedPages": "pp. 1-4 and 9-13"
+    },
+    {
+      "url": "https://drive.google.com/thumbnail?id=1J3Juk-SBEnuULU0Duuxv34G4z_u0IJSh",
+      "kind": "image",
+      "projects": [
+        "Music-Reactive Lighting System"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Rendered successfully with nonzero natural dimensions in project-index DOM; no fallback state."
+    },
+    {
+      "url": "https://docs.google.com/document/d/1ac-VghLU4rsU2PAV6SmzS6wFQxBruPph0U-tRhLg4Hg/edit?usp=sharing",
+      "kind": "document",
+      "projects": [
+        "Music-Reactive Lighting System"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Google Docs navigation timed out; body not read."
+    },
+    {
+      "url": "https://drive.google.com/thumbnail?id=1J7XjttA6vnk38mEErxtXxbbaXc_Og0WA",
+      "kind": "image",
+      "projects": [
+        "Field Robot Road Detection & Control"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Rendered successfully with nonzero natural dimensions in project-index DOM; no fallback state."
+    },
+    {
+      "url": "https://drive.google.com/thumbnail?id=1J95gS0e0o292iM58bk8rfGSMyLUeNhYv",
+      "kind": "image",
+      "projects": [
+        "IR Sensor Counting & Container Positioning Prototype"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Rendered successfully with nonzero natural dimensions in project-index DOM; no fallback state."
+    },
+    {
+      "url": "https://drive.google.com/thumbnail?id=1-hlYLf3wN2HiTVVr3u4Xdfr9z4Zg0Wkc",
+      "kind": "image",
+      "projects": [
+        "Mini Camera Drone Development"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Rendered successfully with nonzero natural dimensions in project-index DOM; no fallback state."
+    },
+    {
+      "url": "https://drive.google.com/thumbnail?id=10BYENVyNXnrGwI_Z3ByJAQ5bsMoGpQqO",
+      "kind": "image",
+      "projects": [
+        "Mini Camera Drone Development"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Gallery URL preserved; final browser check unavailable after Google Docs navigation timeout."
+    },
+    {
+      "url": "https://drive.google.com/thumbnail?id=10FUUjPDN9r59T0N72dFyOmaFqBv39M7a",
+      "kind": "image",
+      "projects": [
+        "Mini Camera Drone Development"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Gallery URL preserved; final browser check unavailable after Google Docs navigation timeout."
+    },
+    {
+      "url": "https://drive.google.com/thumbnail?id=10WlH2fWZvBOakmg73StH1zxrFGlp1c6T",
+      "kind": "image",
+      "projects": [
+        "Mini Camera Drone Development"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Gallery URL preserved; final browser check unavailable after Google Docs navigation timeout."
+    },
+    {
+      "url": "https://drive.google.com/thumbnail?id=1J2gI1AZ3Xco88vp0XkqEro_X390jtTAX",
+      "kind": "image",
+      "projects": [
+        "Mini Camera Drone Development"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Gallery URL preserved; final browser check unavailable after Google Docs navigation timeout."
+    },
+    {
+      "url": "https://drive.google.com/thumbnail?id=10MTOcDhG7GKR0Mp8HKiosz-P6i6Bd9nu",
+      "kind": "image",
+      "projects": [
+        "Line-Following & Obstacle Avoidance Robot"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Rendered successfully with nonzero natural dimensions in project-index DOM; no fallback state."
+    },
+    {
+      "url": "https://jajayu46.github.io/JaJaWebsite/JaJaWeb",
+      "kind": "website",
+      "projects": [
+        "JaJa's Original Website"
+      ],
+      "result": "unverified-network-error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>",
+      "browserResult": "Not independently verified for playback/access during this import."
+    }
+  ],
+  "browserCheckedOn": "2026-11-08 (Asia/Taipei)",
+  "browserSummary": "16 cover images rendered; 7 PDF reports reviewed in relevant excerpts; 4 gallery images, 1 Google Doc, videos and old-site access not independently confirmed in final browser checks. Browser observations are distinct from failed command-line HTTP checks."
+}

@@ -1,5 +1,5 @@
 ---
-interface Props { category?: string; title: string; variant?: number; }
+interface Props { category?: string; title: string; variant?: number; notice?: string; }
 const {category = 'robotics', title} = Astro.props;
 const seed = [...title].reduce((sum, char) => sum + char.charCodeAt(0), 0);
 const variant = (Astro.props.variant ?? seed) % 3;
@@ -11,7 +11,7 @@ const points = Array.from({length: 180}, (_, i) => {
   return {x: 95 + x, y: 62 + y * .65 + x * .17, opacity: .22 + (i % 5) * .13};
 });
 ---
-<div class={`project-visual visual-${category} concept-${variant}`} role="img" aria-label={`Concept illustration for ${title}; actual project media forthcoming`}>
+<div class={`project-visual visual-${category} concept-${variant}`} role="img" aria-label={`Concept illustration for ${title}; ${Astro.props.notice || 'actual project media forthcoming'}`}>
   <span class="visual-coordinate" aria-hidden="true">{category === 'robotics' ? labels[variant] : category === 'software' ? 'SOFTWARE / SYSTEMS / DATA' : 'EMBEDDED / HARDWARE / CONTROL'}</span>
   <svg class="concept-drawing" viewBox="0 0 600 320" fill="none" aria-hidden="true">
     {variant === 0 && <>
@@ -35,5 +35,5 @@ const points = Array.from({length: 180}, (_, i) => {
       <g fill="#78bfd5"><circle cx="253" cy="143" r="3"/><circle cx="335" cy="173" r="3"/><circle cx="335" cy="224" r="3"/></g>
     </>}
   </svg>
-  <span class="visual-note">Concept illustration · project media forthcoming</span>
+  <span class="visual-note">{Astro.props.notice || 'Concept illustration · project media forthcoming'}</span>
 </div>

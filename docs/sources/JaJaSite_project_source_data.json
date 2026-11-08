@@ -1,0 +1,683 @@
+{
+  "sourceWorkbook": "MyWeb.xlsx",
+  "sourceSheet": "MyProject",
+  "notes": [
+    "MyProject_databackup20260512 is a backup; primary MyProject takes precedence.",
+    "20 source entries consolidated into 16 projects by merging five mini-drone records; FAST-LIVO2 is a 17th project added as an explicit placeholder.",
+    "All image URLs are direct Google Drive thumbnail URLs transcribed from the workbook, not verified for anonymous access.",
+    "English summaries are editorial paraphrases of supplied source descriptions and must be reviewed for accuracy."
+  ],
+  "projects": [
+    {
+      "slug": "fast-livo2",
+      "title": "FAST-LIVO2 SLAM & Global Relocalization",
+      "category": "Robotics & Autonomous Systems",
+      "displayTier": "featured",
+      "shortDescription": "Developed ROS 2-based LiDAR-visual-inertial SLAM integration with loop closure and map-based relocalization. Additional validated content and media must be supplied separately.",
+      "technologies": [
+        "ROS 2",
+        "C++",
+        "LiDAR",
+        "PCL",
+        "ICP",
+        "Scan Context",
+        "Pose Graph Optimization"
+      ],
+      "coverImageUrl": null,
+      "imageUrls": [],
+      "resourceUrls": [],
+      "sourceRecords": [],
+      "editorialNote": "Not included in MyWeb.xlsx. Do not invent image/video/results. Use separately supplied FAST-LIVO2 materials.",
+      "featuredOrder": 1,
+      "showOnHome": true,
+      "youtubeUrls": [],
+      "documentUrls": [],
+      "reviewStatus": "needs human verification"
+    },
+    {
+      "slug": "original-website",
+      "title": "JaJa’s Original Website",
+      "category": "Software, AI & Data",
+      "displayTier": "standard",
+      "shortDescription": "Built an original project-portfolio website using HTML and CSS, with JavaScript and Google Apps Script connecting project data to Google Sheets for updates and new project entries.",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Google Apps Script",
+        "Google Sheets"
+      ],
+      "coverImageUrl": "https://drive.google.com/thumbnail?id=1f0VH6YPzg5ryQSsu3cFbMRR37ux1_QHh",
+      "imageUrls": [
+        "https://drive.google.com/thumbnail?id=1f0VH6YPzg5ryQSsu3cFbMRR37ux1_QHh"
+      ],
+      "resourceUrls": [],
+      "sourceRecords": [
+        {
+          "excelRow": 6,
+          "originalTitleZh": "我的網站\n(本網站)",
+          "originalTitleEn": "JaJa's Website\n(This Website)",
+          "originalIntroZh": "技能: HTML/ CSS/ javascript/ Apps script\n\n簡介: 利用HTML & CSS製作前端，javascript & Apps script後端連結到google sheet上，使用者可以利用第一個窗格新增專題Block更改到google sheet中，也可直接從google sheet更改資料。最終利用GitHub發布到網路上\n",
+          "originalIntroEn": "Skills: \nHTML/ CSS/ javascript/ Apps script \n\nDescription: \nUse HTML & CSS as front end, and use javascript & Apps script to connect to google sheet as back end. User can use the first block to add new blocks in the website or modify the data from google sheet.",
+          "imageUrl": "https://drive.google.com/thumbnail?id=1f0VH6YPzg5ryQSsu3cFbMRR37ux1_QHh",
+          "imageId": "1f0VH6YPzg5ryQSsu3cFbMRR37ux1_QHh"
+        }
+      ],
+      "featuredOrder": null,
+      "showOnHome": false,
+      "youtubeUrls": [],
+      "documentUrls": [],
+      "reviewStatus": "needs human verification"
+    },
+    {
+      "slug": "tomato-nbv",
+      "title": "Autonomous Tomato Harvesting with Next-Best-View Planning",
+      "category": "Robotics & Autonomous Systems",
+      "displayTier": "featured",
+      "shortDescription": "Developed a robotic perception and next-best-view planning pipeline to move a manipulator toward improved viewing angles for partially occluded tomatoes, integrating 3D perception and arm control.",
+      "technologies": [
+        "ROS 2",
+        "YOLO",
+        "RGB-D",
+        "ICP",
+        "OctoMap",
+        "Ray Casting",
+        "Docker",
+        "Robot Arm",
+        "Gazebo"
+      ],
+      "coverImageUrl": "https://drive.google.com/thumbnail?id=1ondk1BARA9rqjXV9rQWgMWPY80q7iw43",
+      "imageUrls": [
+        "https://drive.google.com/thumbnail?id=1ondk1BARA9rqjXV9rQWgMWPY80q7iw43"
+      ],
+      "resourceUrls": [
+        "https://drive.google.com/file/d/1fQugP5H3UlYT9QG-rZcHBkgtyob6sIOC/view?usp=sharing",
+        "https://youtu.be/FapvpN5wpkc"
+      ],
+      "sourceRecords": [
+        {
+          "excelRow": 7,
+          "originalTitleZh": "番茄採收機器人 Next-Best-View 演算法開發\n(重要專案)",
+          "originalTitleEn": null,
+          "originalIntroZh": "技能: ROS2/ 深度攝影機/ 3D點雲資料處理/ ICP/ YOLO/ OctoMap/ Ray Casting/ Docker/ 機器手臂控制/ 系統整合與研發/ Gazebo\n\n簡介: 開發完整機器人感知與行動(Robot Perception and Action)系統。研發NBV最佳視角預測演算法，控制機械手臂從受遮蔽的初始視角移動到視野清晰的最佳抓取視角 \n\n完整成果報告: \nhttps://drive.google.com/file/d/1fQugP5H3UlYT9QG-rZcHBkgtyob6sIOC/view?usp=sharing \nACPA11研討會解說影片連結: \nhttps://youtu.be/FapvpN5wpkc ",
+          "originalIntroEn": null,
+          "imageUrl": "https://drive.google.com/thumbnail?id=1ondk1BARA9rqjXV9rQWgMWPY80q7iw43",
+          "imageId": "1ondk1BARA9rqjXV9rQWgMWPY80q7iw43"
+        }
+      ],
+      "featuredOrder": 2,
+      "showOnHome": true,
+      "youtubeUrls": [
+        "https://youtu.be/FapvpN5wpkc"
+      ],
+      "documentUrls": [
+        "https://drive.google.com/file/d/1fQugP5H3UlYT9QG-rZcHBkgtyob6sIOC/view?usp=sharing"
+      ],
+      "reviewStatus": "needs human verification"
+    },
+    {
+      "slug": "scout-mini-library",
+      "title": "Scout Mini Library Navigation",
+      "category": "Robotics & Autonomous Systems",
+      "displayTier": "standard",
+      "shortDescription": "Collaborated with three teammates to integrate SLAM and navigation on a Scout Mini mobile robot for autonomous travel to requested library shelves.",
+      "technologies": [
+        "ROS",
+        "SLAM",
+        "Navigation"
+      ],
+      "coverImageUrl": "https://drive.google.com/thumbnail?id=1PXNhLXDe44UM_tQ-Gt_kZ1HHoryojqli",
+      "imageUrls": [
+        "https://drive.google.com/thumbnail?id=1PXNhLXDe44UM_tQ-Gt_kZ1HHoryojqli"
+      ],
+      "resourceUrls": [
+        "https://youtu.be/3tU8JCqhwRc",
+        "https://drive.google.com/file/d/19wtMZeI3QJxFg0ZKVo2OYzOaOm2WOCfG/view?usp=drive_link",
+        "https://youtu.be/xwccUGWfD4A"
+      ],
+      "sourceRecords": [
+        {
+          "excelRow": 8,
+          "originalTitleZh": "Scout Mini 圖書館導航車",
+          "originalTitleEn": null,
+          "originalIntroZh": "技能: ROS/ SLAM/ Navigation \n\n簡介: 與另外三人合作，使用 ROS 架構整合 SLAM 與 Navigation 技術，使 Scout Mini 能自主導航至目標書架，協助圖書館讀者快速找到書籍位置\n\nDEMO影片: https://youtu.be/3tU8JCqhwRc \n完整成果報告: \nhttps://drive.google.com/file/d/19wtMZeI3QJxFg0ZKVo2OYzOaOm2WOCfG/view?usp=drive_link  \n簡報說明影片: \nhttps://youtu.be/xwccUGWfD4A ",
+          "originalIntroEn": null,
+          "imageUrl": "https://drive.google.com/thumbnail?id=1PXNhLXDe44UM_tQ-Gt_kZ1HHoryojqli",
+          "imageId": "1PXNhLXDe44UM_tQ-Gt_kZ1HHoryojqli"
+        }
+      ],
+      "featuredOrder": null,
+      "showOnHome": true,
+      "youtubeUrls": [
+        "https://youtu.be/3tU8JCqhwRc",
+        "https://youtu.be/xwccUGWfD4A"
+      ],
+      "documentUrls": [
+        "https://drive.google.com/file/d/19wtMZeI3QJxFg0ZKVo2OYzOaOm2WOCfG/view?usp=drive_link"
+      ],
+      "reviewStatus": "needs human verification"
+    },
+    {
+      "slug": "autonomous-object-search",
+      "title": "Autonomous Navigation & Object Search",
+      "category": "Robotics & Autonomous Systems",
+      "displayTier": "featured",
+      "shortDescription": "Built an indoor exploration and navigation pipeline that uses a trained YOLO detector to find a target image and navigates toward its location with mapping, localization, and path planning.",
+      "technologies": [
+        "YOLO",
+        "SLAM",
+        "Localization",
+        "Navigation",
+        "RRT"
+      ],
+      "coverImageUrl": "https://drive.google.com/thumbnail?id=13crIqDnknShLcWaorVXfxRoiGhUkQlqX",
+      "imageUrls": [
+        "https://drive.google.com/thumbnail?id=13crIqDnknShLcWaorVXfxRoiGhUkQlqX"
+      ],
+      "resourceUrls": [
+        "https://www.youtube.com/playlist?list=PLYVkuRLVSj2VRustcw-vZm7mXflJBX_HD",
+        "https://youtu.be/LMYQcKOfj8E"
+      ],
+      "sourceRecords": [
+        {
+          "excelRow": 9,
+          "originalTitleZh": "室內目標搜尋與自主導航機器車",
+          "originalTitleEn": null,
+          "originalIntroZh": "技能: YOLO Model Training、SLAM Mapping、Localization、Navigation、Path Planning\n\n簡介: 本專案是在模擬客廳環境中開發的室內目標搜尋與導航系統。機器車會根據已知地圖資訊自主探索，尋找隨機出現的皮卡丘圖片。系統透過事先的房間影像採樣訓練 YOLO 模型進行目標辨識，並在偵測到目標後結合定位、導航與路徑規劃，使機器車能自動移動至皮卡丘所在位置。\n\nDEMO: \nhttps://www.youtube.com/playlist?list=PLYVkuRLVSj2VRustcw-vZm7mXflJBX_HD \n簡報說明影片: \nhttps://youtu.be/LMYQcKOfj8E ",
+          "originalIntroEn": null,
+          "imageUrl": "https://drive.google.com/thumbnail?id=13crIqDnknShLcWaorVXfxRoiGhUkQlqX",
+          "imageId": "13crIqDnknShLcWaorVXfxRoiGhUkQlqX"
+        }
+      ],
+      "featuredOrder": 3,
+      "showOnHome": true,
+      "youtubeUrls": [
+        "https://www.youtube.com/playlist?list=PLYVkuRLVSj2VRustcw-vZm7mXflJBX_HD",
+        "https://youtu.be/LMYQcKOfj8E"
+      ],
+      "documentUrls": [],
+      "reviewStatus": "needs human verification"
+    },
+    {
+      "slug": "arm-block-stacking",
+      "title": "Robotic Arm Block Stacking",
+      "category": "Robotics & Autonomous Systems",
+      "displayTier": "standard",
+      "shortDescription": "Programmed a robot arm to detect blocks from camera input, align its grasp orientation, pick up blocks, and stack them.",
+      "technologies": [
+        "Robot Arm Control",
+        "Depth Camera",
+        "Image Processing"
+      ],
+      "coverImageUrl": "https://drive.google.com/thumbnail?id=1Dv1S7uv-TdjwtX78FQYBj2Dd3K90pP8Z",
+      "imageUrls": [
+        "https://drive.google.com/thumbnail?id=1Dv1S7uv-TdjwtX78FQYBj2Dd3K90pP8Z"
+      ],
+      "resourceUrls": [
+        "https://youtu.be/6URSk8AAQL0?si=6KHBcef8ERqBiobd",
+        "https://drive.google.com/file/d/1PDHNC-LprKW0frabGmJ4Pirf39SuaQLV/view?usp=drive_link"
+      ],
+      "sourceRecords": [
+        {
+          "excelRow": 10,
+          "originalTitleZh": "機器手臂堆疊積木",
+          "originalTitleEn": null,
+          "originalIntroZh": "技能: 機器手臂控制/ 深度攝影機\n\n簡介: 利用程式控制機器手臂自動處理影像、旋轉至正確的角度夾起方塊積木並堆疊\n\nDEMO影片: \nhttps://youtu.be/6URSk8AAQL0?si=6KHBcef8ERqBiobd \n詳細資訊: \nhttps://drive.google.com/file/d/1PDHNC-LprKW0frabGmJ4Pirf39SuaQLV/view?usp=drive_link  ",
+          "originalIntroEn": null,
+          "imageUrl": "https://drive.google.com/thumbnail?id=1Dv1S7uv-TdjwtX78FQYBj2Dd3K90pP8Z",
+          "imageId": "1Dv1S7uv-TdjwtX78FQYBj2Dd3K90pP8Z"
+        }
+      ],
+      "featuredOrder": null,
+      "showOnHome": true,
+      "youtubeUrls": [
+        "https://youtu.be/6URSk8AAQL0?si=6KHBcef8ERqBiobd"
+      ],
+      "documentUrls": [
+        "https://drive.google.com/file/d/1PDHNC-LprKW0frabGmJ4Pirf39SuaQLV/view?usp=drive_link"
+      ],
+      "reviewStatus": "needs human verification"
+    },
+    {
+      "slug": "control-box",
+      "title": "Control Box Design & Fabrication",
+      "category": "Embedded & Hardware Engineering",
+      "displayTier": "standard",
+      "shortDescription": "Designed motor and sensor signal and power diagrams in KiCad, developed a SolidWorks control-box layout and manufacturing drawings, and tested electrical connections.",
+      "technologies": [
+        "KiCad",
+        "SolidWorks",
+        "Circuit Testing"
+      ],
+      "coverImageUrl": "https://drive.google.com/thumbnail?id=1J3ygOVboQi_el-7ULdxhvypRkl24t2yU",
+      "imageUrls": [
+        "https://drive.google.com/thumbnail?id=1J3ygOVboQi_el-7ULdxhvypRkl24t2yU"
+      ],
+      "resourceUrls": [],
+      "sourceRecords": [
+        {
+          "excelRow": 11,
+          "originalTitleZh": "電控箱",
+          "originalTitleEn": "Control Box ",
+          "originalIntroZh": "技能: KiCad/ Solidworks 3D模型建構\n\n簡介: 設計與會製電路信號圖、電源圖 (KiCad)\n繪製電控箱內部配置3D模型 (Solidworks)\n繪製電源與電路配置圖 (Solidworks)\n繪製2D工程圖並聯繫製造商\n測試電路 ",
+          "originalIntroEn": "Skills:  \nKiCad/ Solidworks 3D modeling\n\nDescription: \nDesign and Draw circuit diagram (KiCad)\nDraw the control box placement model (Solidworks)\nDraw 2D diagram and contact the manufacture\nTest circuit",
+          "imageUrl": "https://drive.google.com/thumbnail?id=1J3ygOVboQi_el-7ULdxhvypRkl24t2yU",
+          "imageId": "1J3ygOVboQi_el-7ULdxhvypRkl24t2yU"
+        }
+      ],
+      "featuredOrder": null,
+      "showOnHome": false,
+      "youtubeUrls": [],
+      "documentUrls": [],
+      "reviewStatus": "needs human verification"
+    },
+    {
+      "slug": "blockchain-vehicle",
+      "title": "Blockchain-Based Vehicle Monitoring System",
+      "category": "Software, AI & Data",
+      "displayTier": "standard",
+      "shortDescription": "Collaborated on a vehicle-monitoring system that records camera and accelerometer measurements, with a Streamlit interface for historical data and blockchain-integrity verification.",
+      "technologies": [
+        "Streamlit",
+        "Blockchain",
+        "Sensors",
+        "Database",
+        "Python"
+      ],
+      "coverImageUrl": "https://drive.google.com/thumbnail?id=1hGEKCk--jENOWLtvZx0is1fOZrz-lmxF",
+      "imageUrls": [
+        "https://drive.google.com/thumbnail?id=1hGEKCk--jENOWLtvZx0is1fOZrz-lmxF"
+      ],
+      "resourceUrls": [
+        "https://drive.google.com/file/d/1wRC-P0oy873NkSm0TEB4VckjptFcTR2g/view?usp=drive_link"
+      ],
+      "sourceRecords": [
+        {
+          "excelRow": 12,
+          "originalTitleZh": "區塊鏈車輛狀態檢測紀錄系統",
+          "originalTitleEn": null,
+          "originalIntroZh": "技能: 區塊練驗證/ 資料庫視覺化使用者介面/ Streamlit\n\n簡介: 與三位組員合作開發區塊鏈車輛資料紀錄系統。透過相機、加速度感測器等裝置蒐集模型車輛即時狀態資料，並將測量數據儲存於資料庫與區塊鏈中。負責開發使用者介面與區塊練驗證功能\n\n詳細資訊: https://drive.google.com/file/d/1wRC-P0oy873NkSm0TEB4VckjptFcTR2g/view?usp=drive_link \n\n",
+          "originalIntroEn": null,
+          "imageUrl": "https://drive.google.com/thumbnail?id=1hGEKCk--jENOWLtvZx0is1fOZrz-lmxF",
+          "imageId": "1hGEKCk--jENOWLtvZx0is1fOZrz-lmxF"
+        }
+      ],
+      "featuredOrder": null,
+      "showOnHome": true,
+      "youtubeUrls": [],
+      "documentUrls": [
+        "https://drive.google.com/file/d/1wRC-P0oy873NkSm0TEB4VckjptFcTR2g/view?usp=drive_link"
+      ],
+      "reviewStatus": "needs human verification"
+    },
+    {
+      "slug": "cinema-reservation",
+      "title": "Cinema Reservation System",
+      "category": "Software, AI & Data",
+      "displayTier": "standard",
+      "shortDescription": "Developed a movie booking web application with React and ASP.NET MVC, including CRUD operations, session-based login, seat reservations, and timestamp-based conflict handling for concurrent bookings.",
+      "technologies": [
+        "React",
+        "ASP.NET MVC",
+        "CRUD",
+        "Sessions",
+        "Concurrency Control"
+      ],
+      "coverImageUrl": "https://drive.google.com/thumbnail?id=13qPVCq-X1g7r0voGRkdB6FWfwh88xxwu",
+      "imageUrls": [
+        "https://drive.google.com/thumbnail?id=13qPVCq-X1g7r0voGRkdB6FWfwh88xxwu"
+      ],
+      "resourceUrls": [
+        "https://youtu.be/FpBPMXGWN6Q"
+      ],
+      "sourceRecords": [
+        {
+          "excelRow": 13,
+          "originalTitleZh": "ASP.NET MVC電影院訂票預約系統",
+          "originalTitleEn": null,
+          "originalIntroZh": "技能: React/ ASP.NET/ MVC/ Session/ CRUD\n\n簡介: 開發網頁式電影院訂票預約系統，前端使用React以減少Server負擔。後端採用 ASP.NET MVC 架構，實作使用者、場次與訂位資料的 CRUD 功能，並支援座位預約功能。同時，使用 Session 實作使用者登入與狀態管理，並透過時間戳記機制進行併發控制，處理多位使用者同時預約同一座位時可能產生的衝突 \n\nDEMO: \nhttps://youtu.be/FpBPMXGWN6Q ",
+          "originalIntroEn": null,
+          "imageUrl": "https://drive.google.com/thumbnail?id=13qPVCq-X1g7r0voGRkdB6FWfwh88xxwu",
+          "imageId": "13qPVCq-X1g7r0voGRkdB6FWfwh88xxwu"
+        }
+      ],
+      "featuredOrder": null,
+      "showOnHome": true,
+      "youtubeUrls": [
+        "https://youtu.be/FpBPMXGWN6Q"
+      ],
+      "documentUrls": [],
+      "reviewStatus": "needs human verification"
+    },
+    {
+      "slug": "national-parks-db",
+      "title": "National Park Database Management System",
+      "category": "Software, AI & Data",
+      "displayTier": "standard",
+      "shortDescription": "Designed parts of a seven-entity relational database for U.S. national parks, wrote Python-based data import and database access, and created a Streamlit map interface.",
+      "technologies": [
+        "MySQL",
+        "Python",
+        "Streamlit",
+        "Relational Database"
+      ],
+      "coverImageUrl": "https://drive.google.com/thumbnail?id=1jovf81fhFwjOYr1Im_jEMW0g7iQ57Jue",
+      "imageUrls": [
+        "https://drive.google.com/thumbnail?id=1jovf81fhFwjOYr1Im_jEMW0g7iQ57Jue"
+      ],
+      "resourceUrls": [
+        "https://drive.google.com/file/d/18CwpuQ_oQD54med0io9_ULwXcvUZKFRK/view?usp=drive_link"
+      ],
+      "sourceRecords": [
+        {
+          "excelRow": 14,
+          "originalTitleZh": "國家公園資料庫管理系統",
+          "originalTitleEn": null,
+          "originalIntroZh": "技能: MySQL/ Database\n\n簡介: 一個國家公園資料庫管理系統，包含美國國家公園、物種、異常報告紀錄與天氣紀錄等七個 Entity。負責部分資料表與關聯設計，並使用 Python實作資料匯入、資料庫連線與 Streamlit地圖介面。\n\n詳細資訊: \nhttps://drive.google.com/file/d/18CwpuQ_oQD54med0io9_ULwXcvUZKFRK/view?usp=drive_link ",
+          "originalIntroEn": null,
+          "imageUrl": "https://drive.google.com/thumbnail?id=1jovf81fhFwjOYr1Im_jEMW0g7iQ57Jue",
+          "imageId": "1jovf81fhFwjOYr1Im_jEMW0g7iQ57Jue"
+        }
+      ],
+      "featuredOrder": null,
+      "showOnHome": true,
+      "youtubeUrls": [],
+      "documentUrls": [
+        "https://drive.google.com/file/d/18CwpuQ_oQD54med0io9_ULwXcvUZKFRK/view?usp=drive_link"
+      ],
+      "reviewStatus": "needs human verification"
+    },
+    {
+      "slug": "industrial-standards-agent",
+      "title": "Industrial Standards AI Agent",
+      "category": "Software, AI & Data",
+      "displayTier": "standard",
+      "shortDescription": "Prototyped an industrial-standards question-answering tool using vectorized reference documents and retrieval-augmented generation, with a user-facing interface.",
+      "technologies": [
+        "RAG",
+        "Vector Database",
+        "AI Agent",
+        "Gradio"
+      ],
+      "coverImageUrl": "https://drive.google.com/thumbnail?id=1a1MB7NaofM5HRwrkvasniyOb-Rmgqg_3",
+      "imageUrls": [
+        "https://drive.google.com/thumbnail?id=1a1MB7NaofM5HRwrkvasniyOb-Rmgqg_3"
+      ],
+      "resourceUrls": [
+        "https://drive.google.com/file/d/1UCBANRYIlkimmNB1PdLxv-PzzwGbCck9/view?usp=drive_link"
+      ],
+      "sourceRecords": [
+        {
+          "excelRow": 15,
+          "originalTitleZh": "ISO規章處理AI Agent",
+          "originalTitleEn": null,
+          "originalIntroZh": "技能: 向量資料庫/ RAG/ AI agent\n\n簡介: 專門設計用於處理工業規章之AI agent，能夠將專業知識檔案與使用者上傳之規章檔案轉換成向量資料庫後\n利用RAG抓取資料，並根據規章回答使用者問題。\n\n詳細資訊: \nhttps://drive.google.com/file/d/1UCBANRYIlkimmNB1PdLxv-PzzwGbCck9/view?usp=drive_link ",
+          "originalIntroEn": null,
+          "imageUrl": "https://drive.google.com/thumbnail?id=1a1MB7NaofM5HRwrkvasniyOb-Rmgqg_3",
+          "imageId": "1a1MB7NaofM5HRwrkvasniyOb-Rmgqg_3"
+        }
+      ],
+      "featuredOrder": null,
+      "showOnHome": false,
+      "youtubeUrls": [],
+      "documentUrls": [
+        "https://drive.google.com/file/d/1UCBANRYIlkimmNB1PdLxv-PzzwGbCck9/view?usp=drive_link"
+      ],
+      "reviewStatus": "needs human verification"
+    },
+    {
+      "slug": "phone-price-model",
+      "title": "Phone Price Prediction Model",
+      "category": "Software, AI & Data",
+      "displayTier": "standard",
+      "shortDescription": "Contributed analysis of how mobile phone brands relate to prices and supported a model-driven interface for estimating prices from device specifications.",
+      "technologies": [
+        "Python",
+        "Machine Learning",
+        "Feature Analysis"
+      ],
+      "coverImageUrl": "https://drive.google.com/thumbnail?id=1OwIg8zizTbKgoPVoCQdg5-qSa2W8SCQC",
+      "imageUrls": [
+        "https://drive.google.com/thumbnail?id=1OwIg8zizTbKgoPVoCQdg5-qSa2W8SCQC"
+      ],
+      "resourceUrls": [
+        "https://drive.google.com/file/d/1rfT6JBAptdvk5ejfXbNdD88YO85FM_8C/view?usp=drive_link"
+      ],
+      "sourceRecords": [
+        {
+          "excelRow": 16,
+          "originalTitleZh": "手機價格預測模型",
+          "originalTitleEn": null,
+          "originalIntroZh": "簡介: 個人負責分析品牌對手機價格的影響，並讓使用者輸入手機的關鍵規格，利用訓練的機器學習模型預估此規格下的手機價格。負責詳細資訊之The Effect of Brand on Phone Price項目P9-P13。 \n\n詳細資訊: https://drive.google.com/file/d/1rfT6JBAptdvk5ejfXbNdD88YO85FM_8C/view?usp=drive_link",
+          "originalIntroEn": null,
+          "imageUrl": "https://drive.google.com/thumbnail?id=1OwIg8zizTbKgoPVoCQdg5-qSa2W8SCQC",
+          "imageId": "1OwIg8zizTbKgoPVoCQdg5-qSa2W8SCQC"
+        }
+      ],
+      "featuredOrder": null,
+      "showOnHome": false,
+      "youtubeUrls": [],
+      "documentUrls": [
+        "https://drive.google.com/file/d/1rfT6JBAptdvk5ejfXbNdD88YO85FM_8C/view?usp=drive_link"
+      ],
+      "reviewStatus": "needs human verification"
+    },
+    {
+      "slug": "music-reactive-light",
+      "title": "Music-Reactive Lighting System",
+      "category": "Embedded & Hardware Engineering",
+      "displayTier": "standard",
+      "shortDescription": "Built an Arduino-based music-reactive lighting system that analyzes audio frequency content and adjusts LED brightness and switching patterns across three user-selectable modes.",
+      "technologies": [
+        "Arduino",
+        "FFT",
+        "Sound Sensor",
+        "Soldering",
+        "LED Control"
+      ],
+      "coverImageUrl": "https://drive.google.com/thumbnail?id=1J3Juk-SBEnuULU0Duuxv34G4z_u0IJSh",
+      "imageUrls": [
+        "https://drive.google.com/thumbnail?id=1J3Juk-SBEnuULU0Duuxv34G4z_u0IJSh"
+      ],
+      "resourceUrls": [
+        "https://docs.google.com/document/d/1ac-VghLU4rsU2PAV6SmzS6wFQxBruPph0U-tRhLg4Hg/edit?usp=sharing"
+      ],
+      "sourceRecords": [
+        {
+          "excelRow": 17,
+          "originalTitleZh": "音樂音響器",
+          "originalTitleEn": "Music Atmosphere Lighter ",
+          "originalIntroZh": "技能: Arduino FFT/ 聲音感測器模組/ 焊接洞洞板電路設計/ 硬體與外觀設計\n\n簡介: 利用聲音感測器模組，接收音訊資料，在利用Arduino FFT Library將震幅資料轉換為頻率(ft)，透過1ft來訂為控制燈光的輸入項，經過雜訊處理後，讓燈光根據音樂的頻率變色跟變速閃爍的舞台的音響氣氛燈。有三個Mode 分別為根据音頻mode1: 混和(音頻低時為2，高時為3)/ 2: 純調亮度/ 3: 純條兩燈光左右閃爍的變換頻率 (用Botton控制)。此外，由於各首歌的音域不同，所以藉由兩個可變電阻旋鈕，來分別調整讓兩顆LED燈達到最亮和最暗所需電壓，以調整適應各歌曲的音域，達到最佳的效果。\n\n詳細資訊: https://docs.google.com/document/d/1ac-VghLU4rsU2PAV6SmzS6wFQxBruPph0U-tRhLg4Hg/edit?usp=sharing ",
+          "originalIntroEn": "Skills: \nFFT / Sound Sensor Module / Soldering Breadboard Circuit Design / Hardware and Appearance Design\n\nDescription: \nUsing a sound sensor module to receive audio data, the Arduino FFT Library is employed to convert amplitude data into frequency (ft). The frequency is then used as an input to control lighting. After noise processing, the stage's lighting ambiance system can change color and flashing speed based on the music's frequency. There are three modes (controlled via button):\n\nMode 1: \nmixed mode (low frequencies activate mode 2, high frequencies activate mode 3).\nMode 2: \nAdjust bright of the LED (high ft --> brighter)\nMode 3: \nAdjust the frequency of changing left(blue) and right(green) LED light (high ft --> change light color faster) \nAdditionally, due to variations in song frequency ranges, two adjustable potentiometers are provided to calibrate the voltage needed for the LEDs to reach their brightest and dimmest states, optimizing the effect for different songs.\n\nMore Info: https://docs.google.com/document/d/1ac-VghLU4rsU2PAV6SmzS6wFQxBruPph0U-tRhLg4Hg/edit?usp=sharing \n------------------------------------------------",
+          "imageUrl": "https://drive.google.com/thumbnail?id=1J3Juk-SBEnuULU0Duuxv34G4z_u0IJSh",
+          "imageId": "1J3Juk-SBEnuULU0Duuxv34G4z_u0IJSh"
+        }
+      ],
+      "featuredOrder": null,
+      "showOnHome": false,
+      "youtubeUrls": [],
+      "documentUrls": [
+        "https://docs.google.com/document/d/1ac-VghLU4rsU2PAV6SmzS6wFQxBruPph0U-tRhLg4Hg/edit?usp=sharing"
+      ],
+      "reviewStatus": "needs human verification"
+    },
+    {
+      "slug": "field-robot-road",
+      "title": "Field Robot Road Detection & Control",
+      "category": "Robotics & Autonomous Systems",
+      "displayTier": "standard",
+      "shortDescription": "Implemented camera-based road-boundary detection and decision logic on a Raspberry Pi, sending control commands to an Arduino for mobile robot steering and motion.",
+      "technologies": [
+        "Python",
+        "OpenCV",
+        "Raspberry Pi",
+        "Arduino",
+        "Motor Control"
+      ],
+      "coverImageUrl": "https://drive.google.com/thumbnail?id=1J7XjttA6vnk38mEErxtXxbbaXc_Og0WA",
+      "imageUrls": [
+        "https://drive.google.com/thumbnail?id=1J7XjttA6vnk38mEErxtXxbbaXc_Og0WA"
+      ],
+      "resourceUrls": [],
+      "sourceRecords": [
+        {
+          "excelRow": 18,
+          "originalTitleZh": "田間機器人道路影像偵測與控制\n(重要專案)",
+          "originalTitleEn": "Field Robot Road Detection and Controller",
+          "originalIntroZh": "技能: 影像影像處裡/ python/ openCV/ 道路偵測/ RPI/ Arduino\n\n簡介: 利用Python openCV 再RPI(上層控制板)上進行影像辨識與決策，偵測兩側的道路，再將影像決策後的結果傳送給Arduino(底層控制板)去操控驅動器與馬達。",
+          "originalIntroEn": "Skills: \nImage Processing / Python / OpenCV / Road Detection / RPI / Arduino\n\nDescription:\nUtilizing Python OpenCV on an RPI (upper control board) for image recognition and decision-making, this project detects road boundaries. The processed image data and decisions are then transmitted to an Arduino (lower control board) to control actuators and motors.",
+          "imageUrl": "https://drive.google.com/thumbnail?id=1J7XjttA6vnk38mEErxtXxbbaXc_Og0WA",
+          "imageId": "1J7XjttA6vnk38mEErxtXxbbaXc_Og0WA"
+        }
+      ],
+      "featuredOrder": null,
+      "showOnHome": true,
+      "youtubeUrls": [],
+      "documentUrls": [],
+      "reviewStatus": "needs human verification"
+    },
+    {
+      "slug": "ir-counter",
+      "title": "IR Sensor Counting & Container Positioning Prototype",
+      "category": "Embedded & Hardware Engineering",
+      "displayTier": "standard",
+      "shortDescription": "Built a sensor-driven counting prototype with an LCD display and additional infrared sensors to detect container position and control when movement should stop or continue.",
+      "technologies": [
+        "IR Sensors",
+        "Raspberry Pi",
+        "LCD"
+      ],
+      "coverImageUrl": "https://drive.google.com/thumbnail?id=1J95gS0e0o292iM58bk8rfGSMyLUeNhYv",
+      "imageUrls": [
+        "https://drive.google.com/thumbnail?id=1J95gS0e0o292iM58bk8rfGSMyLUeNhYv"
+      ],
+      "resourceUrls": [],
+      "sourceRecords": [
+        {
+          "excelRow": 19,
+          "originalTitleZh": "計數器",
+          "originalTitleEn": "Counter",
+          "originalIntroZh": "技能: 感測器/ RPI/ LCD\n\n簡介: 當物體滑過紅外線感測器時，將會計數一次，並顯示在LCD螢幕上。此外，利用另外3個紅外線感測器來定位箱體的位置，控制箱體要繼續移動或停止。未來將擴展應用在進料時技術且自動裝箱的機制上",
+          "originalIntroEn": "Skills: \nSensors / RPi / LCD\n\nDescription:\nWhen an object passes through the infrared sensor, the system increments a count, which is displayed on the LCD screen. Additionally, three other infrared sensors are used to determine the position of the container, controlling whether it continues to move or stops. Future applications aim to expand this system for automated feeding and packaging mechanisms.",
+          "imageUrl": "https://drive.google.com/thumbnail?id=1J95gS0e0o292iM58bk8rfGSMyLUeNhYv",
+          "imageId": "1J95gS0e0o292iM58bk8rfGSMyLUeNhYv"
+        }
+      ],
+      "featuredOrder": null,
+      "showOnHome": false,
+      "youtubeUrls": [],
+      "documentUrls": [],
+      "reviewStatus": "needs human verification"
+    },
+    {
+      "slug": "mini-drone",
+      "title": "Mini Camera Drone Development",
+      "category": "Embedded & Hardware Engineering",
+      "displayTier": "standard",
+      "shortDescription": "Developed a small drone prototype combining a laser-cut frame, an ESP32-CAM wireless video feed, and lightweight motor control circuitry. Documented fit, weight, and heat-management challenges without overstating flight success.",
+      "technologies": [
+        "SolidWorks",
+        "Laser Cutting",
+        "ESP32-CAM",
+        "Arduino",
+        "MOSFET",
+        "Circuit Prototyping"
+      ],
+      "coverImageUrl": "https://drive.google.com/thumbnail?id=1-hlYLf3wN2HiTVVr3u4Xdfr9z4Zg0Wkc",
+      "imageUrls": [
+        "https://drive.google.com/thumbnail?id=1-hlYLf3wN2HiTVVr3u4Xdfr9z4Zg0Wkc",
+        "https://drive.google.com/thumbnail?id=10BYENVyNXnrGwI_Z3ByJAQ5bsMoGpQqO",
+        "https://drive.google.com/thumbnail?id=10FUUjPDN9r59T0N72dFyOmaFqBv39M7a",
+        "https://drive.google.com/thumbnail?id=10WlH2fWZvBOakmg73StH1zxrFGlp1c6T",
+        "https://drive.google.com/thumbnail?id=1J2gI1AZ3Xco88vp0XkqEro_X390jtTAX"
+      ],
+      "resourceUrls": [],
+      "sourceRecords": [
+        {
+          "excelRow": 20,
+          "originalTitleZh": "小型空拍機: 機體 (個人) - 2023/2 台大杜鵑花節展品",
+          "originalTitleEn": "Small Drone: Frame (indivisual) - NTU Azalea Festival Exhibit (Feb 2023)",
+          "originalIntroZh": "技能: 設計能力/ 卡榫組裝設計/ SolidWorks/ 雷切機使用與操作\n\n簡介: 我們選用1020, 1.2mm 的空心杯馬達與直徑7.4cm 的螺旋槳\n[機體機架] 我利用Solidworks 設計並畫出空拍機的3D模擬圖，再用雷切機切割木板並組裝\n問題: 起初，木板在雷切時因為雷射會沿著工程圖的沿線切割，所以實際尺寸會比工程圖設計的尺寸少一些，組裝時沒問題，然而要把四格軸的螺旋槳裝上並啟動時，會導致螺旋槳噴出的狀況。此外，木板材質與切割功率都會造成不同切割時實際尺寸縮小程度。\n克服: 在工程圖的卡縫尺寸縮得更小，並固定木板材質，以讓機體卡合起更加緊實。",
+          "originalIntroEn": "Skills: \nDesign / Snap-fit Assembly / SolidWorks / Laser Cutter Operation\n\nDescription:\nDesigned a drone frame using SolidWorks, cut it from wood with a laser cutter, and assembled it.\n[Problem] \nAt first, laser cutting reduced dimensions slightly, causing loose fits and propeller detachment during operation. Material and cutting power further affected size accuracy.\n[Solution] \nAdjusted snap-fit dimensions in the design and standardized wood material for tighter, more stable assembly.",
+          "imageUrl": "https://drive.google.com/thumbnail?id=1-hlYLf3wN2HiTVVr3u4Xdfr9z4Zg0Wkc",
+          "imageId": "1-hlYLf3wN2HiTVVr3u4Xdfr9z4Zg0Wkc"
+        },
+        {
+          "excelRow": 21,
+          "originalTitleZh": "小型空拍機: 空拍系統 (個人) - 2023/02 台大杜鵑花節展品",
+          "originalTitleEn": "Small Drone: Camera System (indivisual) - NTU Azalea Festival Exhibit (Feb 2023)",
+          "originalIntroZh": "技能: Esp32/ cam/ Arduino IDE/ App Inventor\n\n簡介: 構建空拍機攝影系統，並連結到應用程式上\n我利用Esp32 cam攝影機晶片連上區域網路，利用手機的Wifi，可讓同個區域網路的東西利用IP網址讀取影像資料。並利用App inventor的功能去抓取網站的資料以即時顯示在手機App上",
+          "originalIntroEn": "Skills: \nESP32 / CAM / Arduino IDE / App Inventor\n\nDescription:\nDeveloped a drone photography system connected to a mobile app. Used the ESP32-CAM module to stream video over a local network, allowing devices within the network to access image data via an IP address. Integrated App Inventor to fetch and display the video feed in real time on a custom mobile app.",
+          "imageUrl": "https://drive.google.com/thumbnail?id=10BYENVyNXnrGwI_Z3ByJAQ5bsMoGpQqO",
+          "imageId": "10BYENVyNXnrGwI_Z3ByJAQ5bsMoGpQqO"
+        },
+        {
+          "excelRow": 22,
+          "originalTitleZh": "小型空拍機--電路設計1 (團隊一起) - 2023/02 台大杜鵑花節展品",
+          "originalTitleEn": "Small Drone: Circuit Design(whole team) - NTU Azalea Festival Exhibit (Feb 2023)",
+          "originalIntroZh": "技能: 電路設計/ MosFet/ 焊接洞洞板/ 電流管控/ Arduino IDE\n\n簡介: 這次的電路設計中，遇到了許多實際操作上才會發現的問題，但我們經過資料查找與詢問學長，一步步克服了困難。\n[電路設計1] \n起初，我們利用Arduino Nano 接到小型麵包版上來操控兩顆H-bridge，進而操控四顆螺旋槳馬達的轉速。 ",
+          "originalIntroEn": "Skills: \nCircuit Design / MOSFET / Breadboard Soldering / Current Control / Arduino IDE\n\nDescription:\nDesigned and implemented a circuit to control motor speed using Arduino Nano and H-bridge drivers. Encountered challenges during practical testing but overcame them through research and guidance from seniors.\n\n[Circuit Design 1]\nInitially, the Arduino Nano was connected to a small breadboard to control two H-bridges, which regulated the speed of four propeller motors.",
+          "imageUrl": "https://drive.google.com/thumbnail?id=10FUUjPDN9r59T0N72dFyOmaFqBv39M7a",
+          "imageId": "10FUUjPDN9r59T0N72dFyOmaFqBv39M7a"
+        },
+        {
+          "excelRow": 23,
+          "originalTitleZh": "小型空拍機: 電路設計2 (團隊一起) - 2023/02 台大杜鵑花節展品",
+          "originalTitleEn": "Small Drone: Circuit Design2(whole team) - NTU Azalea Festival Exhibit (Feb 2023)",
+          "originalIntroZh": "[電路設計2]\n(H-bridge 過重: H-bridge >> MosFet)\n但由於麵包版與H-bridge的重量過重，在詢問學長建議後，我們利用MosFet代替H-bridge，達成馬達轉速能漸變式的調整速度。\n(MosFet過熱: 使用散熱片 & 加粗線徑) 雖然MosFet成功減輕了重量，然而由於我們為了有足夠的轉速，使用了高電流輸出的電池，導致MosFet在馬達運行十幾秒時就會超燙。卡了很久，詢問學長後才加了散熱片，達到顯著的散熱效果。 此外，我們也加粗了接到電池輸出孔的電線，因為電流在街上麵包板後會被分流，所以只加粗了電池接線。",
+          "originalIntroEn": "[Circuit Design 2]\n(H-Bridge to MOSFET)\nReplaced the heavy H-bridge with MOSFETs for smoother motor speed control after consulting seniors.\n\n(MOSFET Overheating: Added Heatsink & Thicker Wires)\nThe MOSFET overheated due to high-current battery use. After adding a heatsink and thickening the battery wires, heat dissipation improved, and the system became stable.",
+          "imageUrl": "https://drive.google.com/thumbnail?id=10WlH2fWZvBOakmg73StH1zxrFGlp1c6T",
+          "imageId": "10WlH2fWZvBOakmg73StH1zxrFGlp1c6T"
+        },
+        {
+          "excelRow": 24,
+          "originalTitleZh": "小型空拍機: 電路設計3 (團隊一起) - 2023/02 台大杜鵑花節展品",
+          "originalTitleEn": "Small Drone: Circuit Design3(whole team) - NTU Azalea Festival Exhibit (Feb 2023)",
+          "originalIntroZh": "[電路設計3] \n(小麵包版>>焊接洞洞板) 由於還是太重，我們將麵包板改成焊接的洞洞板以減輕重量 最後，雖然因為電池仍是太重導致若將電池也放在機體上將會飛不起來，但若電池放在機體下，能夠離地飛起。雖然這次飛行操控的部分因為重量的問題無法達成，但經過這次專題學習到了許多實作層面上的問題，例如散熱片的重要、MosFet、電流的注意、與重量的控制。也反思了解一般小型空拍機的控制都是直接集成在一片集成控制片上的，才能有效減低重量。 (是個實作爆肝回憶起來又一直克服困難充實快樂(?)的一個禮拜，每天早上起來就克服一個昨天覺得無解的東西) ",
+          "originalIntroEn": "[Circuit Design 3]\n(Breadboard to Soldered Board)\nTo reduce weight, we replaced the breadboard with a soldered perfboard. While the battery was still too heavy for the drone to fly with it on top, placing it underneath allowed it to take off.\n\nAlthough we couldn't achieve the desired flight control due to weight issues, this project taught me practical lessons on heat dissipation, MOSFETs, current management, and weight control. I also realized that most small drones integrate all controls into a single board to minimize weight.\n\nIt was a challenging yet rewarding week, overcoming problems daily and learning a lot in the process.",
+          "imageUrl": "https://drive.google.com/thumbnail?id=1J2gI1AZ3Xco88vp0XkqEro_X390jtTAX",
+          "imageId": "1J2gI1AZ3Xco88vp0XkqEro_X390jtTAX"
+        }
+      ],
+      "featuredOrder": null,
+      "showOnHome": false,
+      "youtubeUrls": [],
+      "documentUrls": [],
+      "reviewStatus": "needs human verification"
+    },
+    {
+      "slug": "line-following-car",
+      "title": "Line-Following & Obstacle Avoidance Robot",
+      "category": "Embedded & Hardware Engineering",
+      "displayTier": "standard",
+      "shortDescription": "Built a two-person competition robot for line following and obstacle avoidance, with sensor-driven motor speed adjustments; the team placed third in the class competition.",
+      "technologies": [
+        "ATmega328P",
+        "IR Sensors",
+        "Ultrasonic Sensor",
+        "Motor Control"
+      ],
+      "coverImageUrl": "https://drive.google.com/thumbnail?id=10MTOcDhG7GKR0Mp8HKiosz-P6i6Bd9nu",
+      "imageUrls": [
+        "https://drive.google.com/thumbnail?id=10MTOcDhG7GKR0Mp8HKiosz-P6i6Bd9nu"
+      ],
+      "resourceUrls": [],
+      "sourceRecords": [
+        {
+          "excelRow": 25,
+          "originalTitleZh": "避障循跡車 - 大一微控制器期末專題",
+          "originalTitleEn": "Obstacle Avoidance and Line Following Car - Freshman Microcontroller Course Final Project",
+          "originalIntroZh": "技能: ATmega328P微控制器/ IR sensor/ 超音波感測器/ 車體控制\n\n簡介: 此為大一下微控制器與原理的期末比賽專題，兩人一組，車體分別需要以最快速度跑完巡機賽道與避障賽道\n[循跡] 利用三個IR Sensor讀取資料並傳輸至ATmega328P微控制器，藉由三個IR sensor的狀態(110/ 100/ 000/ 001/ 011) 做五段式的轉速以調整巡機方向。\n[避障] 利用感測器讓車子靠右行走並避障\n最終我們組得到全班競賽的第三名 耶",
+          "originalIntroEn": "Skills: \nATmega328P Microcontroller / IR Sensor / Ultrasonic Sensor / Vehicle Control\n\nDescription:\nFor the freshman microcontroller course final project, we worked in pairs to create a car that would complete both a line-following and obstacle-avoiding track in the shortest time.\n[Line Following] \nUsed three IR sensors to read the track and send data to the ATmega328P microcontroller. Based on the sensor states (110/100/000/001/011), the car adjusted its speed in five stages to follow the track.\n[Obstacle Avoidance] \nUse sensor to help the car stay on the right side and avoid obstacles.\nOur team achieved 3rd place in the class competition. Yay!",
+          "imageUrl": "https://drive.google.com/thumbnail?id=10MTOcDhG7GKR0Mp8HKiosz-P6i6Bd9nu",
+          "imageId": "10MTOcDhG7GKR0Mp8HKiosz-P6i6Bd9nu"
+        }
+      ],
+      "featuredOrder": null,
+      "showOnHome": false,
+      "youtubeUrls": [],
+      "documentUrls": [],
+      "reviewStatus": "needs human verification"
+    }
+  ]
+}

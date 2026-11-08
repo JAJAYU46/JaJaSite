@@ -307,3 +307,21 @@ html.dark-mode .post-full-content strong { color:var(--ice); }
   .site-footer-content { align-items:start; }
 }
 @media (prefers-reduced-motion:reduce) { :root { scroll-behavior:auto; } *,*:before,*:after { animation:none !important; transition:none !important; } .featured-project:hover,.standard-feed .post-card:hover,a.pill:hover,.featured-project:hover .featured-media > img,.featured-project:hover .concept-drawing,.standard-feed .post-card:hover .post-card-image { transform:none; } }
+
+/* Source media uses the existing card geometry; failures reveal the neutral concept fallback. */
+.project-image { position:relative; width:100%; height:100%; overflow:hidden; }
+.project-image > img { display:block; width:100%; height:100%; object-fit:cover; transition:transform .4s; }
+.project-image > [hidden] { display:none !important; }
+.project-image-fallback { width:100%; height:100%; }
+.featured-project:hover .project-image > img { transform:scale(1.035); }
+.project-gallery { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; margin:20px 0 25px 57px; }
+.project-gallery figure { min-width:0; margin:0; }
+.project-gallery .project-image { height:auto; aspect-ratio:16/10; border:1px solid var(--border); border-radius:10px; }
+.post-full-content .project-gallery img { margin:0; max-width:100%; }
+.project-gallery figcaption a { display:block; margin-top:4px; }
+.post-full-content .project-resources { padding-left:20px; }
+.project-resources li { padding-block:4px; overflow-wrap:anywhere; }
+@media(max-width:620px) { .project-gallery { grid-template-columns:minmax(0,1fr); margin-left:0; } }
+@media(prefers-reduced-motion:reduce) { .featured-project:hover .project-image > img { transform:none; } }
+
+.standard-feed .post-card-image-link { background:#082639; }

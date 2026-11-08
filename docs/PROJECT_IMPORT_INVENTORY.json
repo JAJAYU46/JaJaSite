@@ -1,0 +1,270 @@
+[
+  {
+    "sourceSlug": "fast-livo2",
+    "existingSlug": "fast-livo2-slam-global-relocalization",
+    "existingTitle": "FAST-LIVO2 SLAM & Global Relocalization",
+    "sourceTitle": "FAST-LIVO2 SLAM & Global Relocalization",
+    "action": "preserved",
+    "sourceRows": [],
+    "sourceCover": null,
+    "sourceVideos": [],
+    "sourceDocuments": [],
+    "previousBodySha256": "6226cde41bbf5b09b9070253c675df319e885432a9700632046ed7a4d72dde1f"
+  },
+  {
+    "sourceSlug": "original-website",
+    "existingSlug": "jaja-original-website",
+    "existingTitle": "JaJa's Original Website",
+    "sourceTitle": "JaJa’s Original Website",
+    "action": "updated",
+    "sourceRows": [
+      6
+    ],
+    "sourceCover": "https://drive.google.com/thumbnail?id=1f0VH6YPzg5ryQSsu3cFbMRR37ux1_QHh",
+    "sourceVideos": [],
+    "sourceDocuments": [],
+    "previousBodySha256": "49fe7b08b6337aaf9341106ed604c0f201de820bc76ffdb745e1a1790eca8c38"
+  },
+  {
+    "sourceSlug": "tomato-nbv",
+    "existingSlug": "autonomous-tomato-harvesting",
+    "existingTitle": "Autonomous Tomato Harvesting with Next-Best-View Planning",
+    "sourceTitle": "Autonomous Tomato Harvesting with Next-Best-View Planning",
+    "action": "updated",
+    "sourceRows": [
+      7
+    ],
+    "sourceCover": "https://drive.google.com/thumbnail?id=1ondk1BARA9rqjXV9rQWgMWPY80q7iw43",
+    "sourceVideos": [
+      "https://youtu.be/FapvpN5wpkc"
+    ],
+    "sourceDocuments": [
+      "https://drive.google.com/file/d/1fQugP5H3UlYT9QG-rZcHBkgtyob6sIOC/view?usp=sharing"
+    ],
+    "previousBodySha256": "3802885a85a5dee75c14252829f14a6a5d756018b145115543752ccd4cad8568"
+  },
+  {
+    "sourceSlug": "scout-mini-library",
+    "existingSlug": "scout-mini-library-navigation",
+    "existingTitle": "Scout Mini Library Navigation",
+    "sourceTitle": "Scout Mini Library Navigation",
+    "action": "updated",
+    "sourceRows": [
+      8
+    ],
+    "sourceCover": "https://drive.google.com/thumbnail?id=1PXNhLXDe44UM_tQ-Gt_kZ1HHoryojqli",
+    "sourceVideos": [
+      "https://youtu.be/3tU8JCqhwRc",
+      "https://youtu.be/xwccUGWfD4A"
+    ],
+    "sourceDocuments": [
+      "https://drive.google.com/file/d/19wtMZeI3QJxFg0ZKVo2OYzOaOm2WOCfG/view?usp=drive_link"
+    ],
+    "previousBodySha256": "22f942b1d7580f91dbd6091137fb94f81bfc1fb0c71a8d6aa3fadfed55669b3e"
+  },
+  {
+    "sourceSlug": "autonomous-object-search",
+    "existingSlug": "autonomous-navigation-object-search",
+    "existingTitle": "Autonomous Navigation & Object Search",
+    "sourceTitle": "Autonomous Navigation & Object Search",
+    "action": "updated",
+    "sourceRows": [
+      9
+    ],
+    "sourceCover": "https://drive.google.com/thumbnail?id=13crIqDnknShLcWaorVXfxRoiGhUkQlqX",
+    "sourceVideos": [
+      "https://www.youtube.com/playlist?list=PLYVkuRLVSj2VRustcw-vZm7mXflJBX_HD",
+      "https://youtu.be/LMYQcKOfj8E"
+    ],
+    "sourceDocuments": [],
+    "previousBodySha256": "df9e766c8fb5d7f04468229aeb3a1209927701672d4d5dc361dd9c8a4bfcec99"
+  },
+  {
+    "sourceSlug": "arm-block-stacking",
+    "existingSlug": "robotic-arm-block-stacking",
+    "existingTitle": "Robotic Arm Block Stacking",
+    "sourceTitle": "Robotic Arm Block Stacking",
+    "action": "updated",
+    "sourceRows": [
+      10
+    ],
+    "sourceCover": "https://drive.google.com/thumbnail?id=1Dv1S7uv-TdjwtX78FQYBj2Dd3K90pP8Z",
+    "sourceVideos": [
+      "https://youtu.be/6URSk8AAQL0?si=6KHBcef8ERqBiobd"
+    ],
+    "sourceDocuments": [
+      "https://drive.google.com/file/d/1PDHNC-LprKW0frabGmJ4Pirf39SuaQLV/view?usp=drive_link"
+    ],
+    "previousBodySha256": "9a170900edd4e16494bd42140fd6df337c05e1753f550c5f044a630d08918a41"
+  },
+  {
+    "sourceSlug": "control-box",
+    "existingSlug": "control-box-design",
+    "existingTitle": "Control Box Design & Fabrication",
+    "sourceTitle": "Control Box Design & Fabrication",
+    "action": "updated",
+    "sourceRows": [
+      11
+    ],
+    "sourceCover": "https://drive.google.com/thumbnail?id=1J3ygOVboQi_el-7ULdxhvypRkl24t2yU",
+    "sourceVideos": [],
+    "sourceDocuments": [],
+    "previousBodySha256": "75bdc849e823aba4f014671fe6b7f25cae3ccf2fde616a833c1f6940cc87da80"
+  },
+  {
+    "sourceSlug": "blockchain-vehicle",
+    "existingSlug": "blockchain-vehicle-monitoring",
+    "existingTitle": "Blockchain-Based Vehicle Monitoring System",
+    "sourceTitle": "Blockchain-Based Vehicle Monitoring System",
+    "action": "updated",
+    "sourceRows": [
+      12
+    ],
+    "sourceCover": "https://drive.google.com/thumbnail?id=1hGEKCk--jENOWLtvZx0is1fOZrz-lmxF",
+    "sourceVideos": [],
+    "sourceDocuments": [
+      "https://drive.google.com/file/d/1wRC-P0oy873NkSm0TEB4VckjptFcTR2g/view?usp=drive_link"
+    ],
+    "previousBodySha256": "01468d13c675571e3cb87030271af1fac9478982833dec0a15550aed2079b527"
+  },
+  {
+    "sourceSlug": "cinema-reservation",
+    "existingSlug": "cinema-reservation-system",
+    "existingTitle": "Cinema Reservation System",
+    "sourceTitle": "Cinema Reservation System",
+    "action": "updated",
+    "sourceRows": [
+      13
+    ],
+    "sourceCover": "https://drive.google.com/thumbnail?id=13qPVCq-X1g7r0voGRkdB6FWfwh88xxwu",
+    "sourceVideos": [
+      "https://youtu.be/FpBPMXGWN6Q"
+    ],
+    "sourceDocuments": [],
+    "previousBodySha256": "8c32fb51da8c993a44db3efc9347237ce2bfa469d5dbabf34291f208a503b042"
+  },
+  {
+    "sourceSlug": "national-parks-db",
+    "existingSlug": "national-park-database",
+    "existingTitle": "National Park Database Management System",
+    "sourceTitle": "National Park Database Management System",
+    "action": "updated",
+    "sourceRows": [
+      14
+    ],
+    "sourceCover": "https://drive.google.com/thumbnail?id=1jovf81fhFwjOYr1Im_jEMW0g7iQ57Jue",
+    "sourceVideos": [],
+    "sourceDocuments": [
+      "https://drive.google.com/file/d/18CwpuQ_oQD54med0io9_ULwXcvUZKFRK/view?usp=drive_link"
+    ],
+    "previousBodySha256": "870f28a947f4ad1b2b9d5a82748478cb780fac0b068f52051a397e959619da6e"
+  },
+  {
+    "sourceSlug": "industrial-standards-agent",
+    "existingSlug": "industrial-standards-ai-agent",
+    "existingTitle": "Industrial Standards AI Agent",
+    "sourceTitle": "Industrial Standards AI Agent",
+    "action": "updated",
+    "sourceRows": [
+      15
+    ],
+    "sourceCover": "https://drive.google.com/thumbnail?id=1a1MB7NaofM5HRwrkvasniyOb-Rmgqg_3",
+    "sourceVideos": [],
+    "sourceDocuments": [
+      "https://drive.google.com/file/d/1UCBANRYIlkimmNB1PdLxv-PzzwGbCck9/view?usp=drive_link"
+    ],
+    "previousBodySha256": "b8678ba3741343248dcb11c4fe7a8271a31db71bdc73fec20b0f3a185c1404e3"
+  },
+  {
+    "sourceSlug": "phone-price-model",
+    "existingSlug": "phone-price-prediction",
+    "existingTitle": "Phone Price Prediction Model",
+    "sourceTitle": "Phone Price Prediction Model",
+    "action": "updated",
+    "sourceRows": [
+      16
+    ],
+    "sourceCover": "https://drive.google.com/thumbnail?id=1OwIg8zizTbKgoPVoCQdg5-qSa2W8SCQC",
+    "sourceVideos": [],
+    "sourceDocuments": [
+      "https://drive.google.com/file/d/1rfT6JBAptdvk5ejfXbNdD88YO85FM_8C/view?usp=drive_link"
+    ],
+    "previousBodySha256": "87a3a3453c1b4490a9a734068625ef0bce86ed867077584798b834e55a0ca69a"
+  },
+  {
+    "sourceSlug": "music-reactive-light",
+    "existingSlug": "music-reactive-lighting",
+    "existingTitle": "Music-Reactive Lighting System",
+    "sourceTitle": "Music-Reactive Lighting System",
+    "action": "updated",
+    "sourceRows": [
+      17
+    ],
+    "sourceCover": "https://drive.google.com/thumbnail?id=1J3Juk-SBEnuULU0Duuxv34G4z_u0IJSh",
+    "sourceVideos": [],
+    "sourceDocuments": [
+      "https://docs.google.com/document/d/1ac-VghLU4rsU2PAV6SmzS6wFQxBruPph0U-tRhLg4Hg/edit?usp=sharing"
+    ],
+    "previousBodySha256": "d7ff2ca9046afc424e9a814e431c97c8e8113070908bb653bb2f6a11222ba293"
+  },
+  {
+    "sourceSlug": "field-robot-road",
+    "existingSlug": "field-robot-road-detection-control",
+    "existingTitle": "Field Robot Road Detection & Control",
+    "sourceTitle": "Field Robot Road Detection & Control",
+    "action": "updated",
+    "sourceRows": [
+      18
+    ],
+    "sourceCover": "https://drive.google.com/thumbnail?id=1J7XjttA6vnk38mEErxtXxbbaXc_Og0WA",
+    "sourceVideos": [],
+    "sourceDocuments": [],
+    "previousBodySha256": "fafb6222dae0fa42dd6e9180e1e3c880b3576bf5bb0cad5ac7a44c4799490c8e"
+  },
+  {
+    "sourceSlug": "ir-counter",
+    "existingSlug": "ir-counting-sorting",
+    "existingTitle": "IR Sensor Counting & Sorting Prototype",
+    "sourceTitle": "IR Sensor Counting & Container Positioning Prototype",
+    "action": "updated",
+    "sourceRows": [
+      19
+    ],
+    "sourceCover": "https://drive.google.com/thumbnail?id=1J95gS0e0o292iM58bk8rfGSMyLUeNhYv",
+    "sourceVideos": [],
+    "sourceDocuments": [],
+    "previousBodySha256": "0ae6515c0d46b66f3001424b63c5135eb653ef0604d6e48fc07e4a598c22635d"
+  },
+  {
+    "sourceSlug": "mini-drone",
+    "existingSlug": "mini-camera-drone",
+    "existingTitle": "Mini Camera Drone Development",
+    "sourceTitle": "Mini Camera Drone Development",
+    "action": "updated",
+    "sourceRows": [
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "sourceCover": "https://drive.google.com/thumbnail?id=1-hlYLf3wN2HiTVVr3u4Xdfr9z4Zg0Wkc",
+    "sourceVideos": [],
+    "sourceDocuments": [],
+    "previousBodySha256": "43fe07254d3e0d8bdaefa339a13d973b732abfdfe0035ede66df85f7a5d90008"
+  },
+  {
+    "sourceSlug": "line-following-car",
+    "existingSlug": "line-following-obstacle-avoidance",
+    "existingTitle": "Line-Following & Obstacle Avoidance Robot",
+    "sourceTitle": "Line-Following & Obstacle Avoidance Robot",
+    "action": "updated",
+    "sourceRows": [
+      25
+    ],
+    "sourceCover": "https://drive.google.com/thumbnail?id=10MTOcDhG7GKR0Mp8HKiosz-P6i6Bd9nu",
+    "sourceVideos": [],
+    "sourceDocuments": [],
+    "previousBodySha256": "fc31784e5a4f285591ae3c64520d79e72ddcb0dae173ab24d680a1f0c2c30d83"
+  }
+]
