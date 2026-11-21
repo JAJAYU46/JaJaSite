@@ -14,18 +14,192 @@ export function getStaticPaths() { return [{ params: {page: undefined} }]; }
 const projects = (await getCollection('posts', ({data}) => !data.draft && !!data.projectCategory)).sort(sortProjects);
 const featured = projects.filter(p => p.data.featured).sort((a,b) => (a.data.featuredOrder ?? 100) - (b.data.featuredOrder ?? 100)).slice(0,3);
 const more = projects.filter(p => p.data.showOnHome && !featured.some(f => f.id === p.id)).slice(0, portfolio.homeProjectCount);
+
+const base = import.meta.env.BASE_URL;
+
+const spotlightProjects = [
+  {
+    category: "ROBOTICS / PERCEPTION",
+    title: "Teaching robots where to look next.",
+    subtitle: "Autonomous Tomato Harvesting with Next Best View",
+    image: `${base}images/nbv-cover.webp`,
+    video: `${base}videos/nbv-demo.mp4`,
+    link: getAssetUrl('/projects/')
+  },
+  {
+    category: "SLAM / LOCALIZATION",
+    title: "Mapping the world. Finding our way back.",
+    subtitle: "FAST-LIVO2 SLAM & Global Relocalization",
+    image: `${base}images/fastlivo-cover.webp`,
+    video: "",
+    link: getAssetUrl('/fast-livo2-slam-global-relocalization/')
+  },
+  {
+    category: "ROBOTICS / NAVIGATION",
+    title: "Exploring spaces autonomously.",
+    subtitle: "Autonomous Navigation & Object Search",
+    image: `${base}images/navigation-cover.webp`,
+    video: "",
+    link: getAssetUrl('/projects/')
+  }
+];
+
 ---
 <Layout current="home">
   <header class="site-header outer"><div class="inner"><SiteNav current="home" /></div></header>
   <main id="site-main" class="site-main">
     <section class="hero outer" aria-labelledby="intro-title">
       <GlacierArtwork placement="hero" /><OceanWaves />
+      <!-- 
       <div class="inner hero-content"><p class="eyebrow">ROBOTICS <span>·</span> SOFTWARE <span>·</span> AUTONOMY</p>
         <h1 id="intro-title">Hi, I'm <span>Chia-Jung Yu.</span></h1>
         <p class="hero-description">I'm an incoming M.S. Robotics student at Boston University with a background in Bio-Mechatronics Engineering at National Taiwan University. I enjoy building autonomous robotic systems, from perception and SLAM to real-world software integration.</p>
         <PortfolioLinks />
+      </div> -->
+      <div class="hero-content">
+
+        <!-- 左邊：原本的自我介紹 -->
+        <div class="hero-copy">
+          <p class="eyebrow">ROBOTICS · SOFTWARE · AUTONOMY</p>
+          <h1>Hi, I'm <span>Chia-Jung Yu.</span></h1>
+          <p class="hero-description">I'm an incoming M.S. Robotics student at Boston University with a background in Bio-Mechatronics Engineering at National Taiwan University. I enjoy building autonomous robotic systems, from perception and SLAM to real-world software integration.</p>
+          <div class="hero-actions"></div>
+        </div>
+
+        <!-- 右邊：個人照片 -->
+        <div class="hero-portrait">
+          <div class="portrait-frame">
+            <img
+              src={`${import.meta.env.BASE_URL}images/JaJaProfilePhoto2_new.png`}
+              alt="Chia-Jung Yu"
+            />
+          </div>
+          <span class="portrait-caption">
+            CHIA-JUNG YU / ROBOTICS ENGINEER
+          </span>
+        </div>
+
       </div>
     </section>
+
+    <!-- ========================================
+         CINEMATIC PROJECT SPOTLIGHT
+         大型影片橫幅放在 Education 前面
+         ======================================== -->
+    <section class="cinematic-spotlight" aria-label="Featured projects">
+      <div class="cinematic-container">
+
+        <div class="cinematic-label">
+          <span>JAJA / FEATURED STORIES</span>
+          <span>ENGINEERING IN MOTION</span>
+        </div>
+
+        <div class="cinematic-stage">
+
+          {spotlightProjects.map((project, index) => (
+            <article
+              class="cinematic-slide"
+              data-cinematic-slide
+              hidden={index !== 0}
+              aria-label={`Story ${index + 1}: ${project.subtitle}`}
+            >
+              <div class="cinematic-media">
+                <img
+                  src={project.image}
+                  alt=""
+                  loading={index === 0 ? "eager" : "lazy"}
+                />
+
+                {project.video && (
+                  <video
+                    autoplay={index === 0}
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                    poster={project.image}
+                    aria-hidden="true"
+                    data-cinematic-video
+                  >
+                    <source src={project.video} type="video/mp4" />
+                  </video>
+                )}
+              </div>
+
+              <div class="cinematic-overlay"></div>
+
+              <div class="cinematic-content">
+                <span class="cinematic-category">
+                  {project.category}
+                </span>
+
+                <h2>{project.title}</h2>
+                <p>{project.subtitle}</p>
+
+                <div class="cinematic-actions">
+                  <a href={project.link} class="cinematic-link">
+                    Explore Project <span aria-hidden="true">↗</span>
+                  </a>
+
+                  {project.video && (
+                    <a
+                      class="cinematic-watch"
+                      href={project.video}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      ▶ Watch Full Demo
+                    </a>
+                  )}
+                </div>
+              </div>
+            </article>
+          ))}
+
+          <div class="cinematic-navigation">
+
+            <div class="cinematic-progress">
+              {spotlightProjects.map((project, index) => (
+                <button
+                  type="button"
+                  class:list={[
+                    "cinematic-progress-button",
+                    { "is-active": index === 0 }
+                  ]}
+                  data-cinematic-dot
+                  aria-label={`Show ${project.subtitle}`}
+                  aria-current={index === 0 ? "true" : undefined}
+                ></button>
+              ))}
+            </div>
+
+            <div class="cinematic-navigation-right">
+              <span class="cinematic-counter" aria-live="polite">
+                <span data-cinematic-current>01</span>
+                / {String(spotlightProjects.length).padStart(2, "0")}
+              </span>
+
+              <button
+                type="button"
+                class="cinematic-arrow"
+                data-cinematic-prev
+                aria-label="Previous project"
+              >←</button>
+
+              <button
+                type="button"
+                class="cinematic-arrow"
+                data-cinematic-next
+                aria-label="Next project"
+              >→</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
     <div class="outer"><div class="inner"><EducationTimeline />
       <section class="portfolio-section" aria-labelledby="featured-title"><div class="section-heading"><div><p class="eyebrow">SELECTED WORK / 01—03</p><h2 id="featured-title">Featured Robotics Projects</h2></div><a class="text-link" href={getAssetUrl('/projects/')}>View all projects <span aria-hidden="true">→</span></a></div>
         <div class="featured-list">{featured.map((post,index) => <FeaturedProjectCard post={post} index={index} />)}</div>
@@ -34,3 +208,84 @@ const more = projects.filter(p => p.data.showOnHome && !featured.some(f => f.id 
     </div></div>
   </main>
 </Layout>
+
+
+<script>
+  const root = document.querySelector<HTMLElement>(
+    ".cinematic-spotlight"
+  );
+
+  if (root) {
+    const slides = Array.from(
+      root.querySelectorAll<HTMLElement>(
+        "[data-cinematic-slide]"
+      )
+    );
+
+    const dots = Array.from(
+      root.querySelectorAll<HTMLButtonElement>(
+        "[data-cinematic-dot]"
+      )
+    );
+
+    const counter = root.querySelector<HTMLElement>(
+      "[data-cinematic-current]"
+    );
+
+    let active = 0;
+
+    function showSlide(index: number) {
+      if (!slides.length) return;
+
+      active = (index + slides.length) % slides.length;
+
+      slides.forEach((slide, i) => {
+        const selected = i === active;
+        slide.hidden = !selected;
+
+        const video = slide.querySelector<HTMLVideoElement>(
+          "[data-cinematic-video]"
+        );
+
+        if (video) {
+          if (selected) {
+            video.muted = true;
+            video.play().catch(() => {
+              // Poster remains visible if autoplay is blocked.
+            });
+          } else {
+            video.pause();
+          }
+        }
+      });
+
+      dots.forEach((dot, i) => {
+        const selected = i === active;
+        dot.classList.toggle("is-active", selected);
+
+        if (selected) {
+          dot.setAttribute("aria-current", "true");
+        } else {
+          dot.removeAttribute("aria-current");
+        }
+      });
+
+      if (counter) {
+        counter.textContent = String(active + 1).padStart(2, "0");
+      }
+    }
+
+    root.querySelector("[data-cinematic-prev]")
+      ?.addEventListener("click", () => showSlide(active - 1));
+
+    root.querySelector("[data-cinematic-next]")
+      ?.addEventListener("click", () => showSlide(active + 1));
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener("click", () => showSlide(index));
+    });
+
+    showSlide(0);
+  }
+</script>
+
